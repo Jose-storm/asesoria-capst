@@ -1,0 +1,1 @@
+/* Importar desde componentes general */
