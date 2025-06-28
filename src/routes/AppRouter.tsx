@@ -13,6 +13,7 @@ import Nosotros from "@/pages/aboutus/Nosotros";
 import Contacto from "@/pages/contact/Contacto";
 import Cursos from "@/pages/cursos/Cursos";
 import CursoDetail from "@/pages/cursos/CursoDetail";
+import BlogGe from "@/pages/blog/BlogGe";
 
 const AppRouter = () => {
     return (
@@ -20,13 +21,14 @@ const AppRouter = () => {
         <Routes>
             {/* Layout Público */}
             <Route element={<MainLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/blog/:id" element={<BlogDetail />} />
-            <Route path="/nosotros" element={<Nosotros />} />
-            <Route path="/contacto" element={<Contacto />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/cursos" element={<Cursos />} />
-            <Route path="/cursos/:id" element={<CursoDetail />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/blog/:id" element={<BlogDetail />} />
+                <Route path="/nosotros" element={<Nosotros />} />
+                <Route path="/contacto" element={<Contacto />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/cursos" element={<Cursos />} />
+                <Route path="/cursos/:id" element={<CursoDetail />} />
+                <Route path="/blog" element={<BlogGe></BlogGe>}/>
             </Route>
 
             {/* Layout del Administrador */}

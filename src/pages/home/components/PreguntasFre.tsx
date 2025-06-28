@@ -2,36 +2,36 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 type Pregunta = {
-  id: string;
-  pregunta: string;
-  respuesta: string;
+    id: string;
+    pregunta: string;
+    respuesta: string;
 };
 
 const faqs: Pregunta[] = [
-  {
-    id: "faq1",
-    pregunta: "¿Qué servicios de asesoría empresarial ofrecen?",
-    respuesta:
-      "Brindamos asesoría integral en áreas clave como gestión financiera, contabilidad, tributación, asuntos laborales y estrategias corporativas adaptadas a tu negocio.",
-  },
-  {
-    id: "faq2",
-    pregunta: "¿Cómo puedo solicitar una consulta personalizada?",
-    respuesta:
-      "Simplemente completa el formulario en nuestra página de contacto o llámanos directamente. Te responderemos en menos de 24 horas para coordinar una reunión.",
-  },
-  {
-    id: "faq3",
-    pregunta: "¿Atienden a emprendedores o solo a empresas grandes?",
-    respuesta:
-      "Sí, trabajamos con empresas de todos los tamaños: desde emprendimientos en etapa inicial hasta grandes corporaciones consolidadas.",
-  },
-  {
-    id: "faq4",
-    pregunta: "¿Qué beneficios obtengo al contratar su asesoría?",
-    respuesta:
-      "Nuestros clientes obtienen soluciones personalizadas, cumplimiento normativo, optimización fiscal y mejoras estratégicas que impulsan el crecimiento sostenible.",
-  },
+    {
+        id: "faq1",
+        pregunta: "¿Qué servicios de asesoría empresarial ofrecen?",
+        respuesta:
+        "Brindamos asesoría integral en áreas clave como gestión financiera, contabilidad, tributación, asuntos laborales y estrategias corporativas adaptadas a tu negocio.",
+    },
+    {
+        id: "faq2",
+        pregunta: "¿Cómo puedo solicitar una consulta personalizada?",
+        respuesta:
+        "Simplemente completa el formulario en nuestra página de contacto o llámanos directamente. Te responderemos en menos de 24 horas para coordinar una reunión.",
+    },
+    {
+        id: "faq3",
+        pregunta: "¿Atienden a emprendedores o solo a empresas grandes?",
+        respuesta:
+        "Sí, trabajamos con empresas de todos los tamaños: desde emprendimientos en etapa inicial hasta grandes corporaciones consolidadas.",
+    },
+    {
+        id: "faq4",
+        pregunta: "¿Qué beneficios obtengo al contratar su asesoría?",
+        respuesta:
+        "Nuestros clientes obtienen soluciones personalizadas, cumplimiento normativo, optimización fiscal y mejoras estratégicas que impulsan el crecimiento sostenible.",
+    },
 ];
 
 const PreguntasFre: React.FC = () => {

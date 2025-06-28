@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { ChevronDown } from "lucide-react";
 
 export default function Header() {
 const [isOpen, setIsOpen] = useState<boolean>(false);
-const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+const [, setOpenSubmenu] = useState<string | null>(null);
 
 const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -13,9 +14,9 @@ const closeMenu = () => {
     setOpenSubmenu(null);
   };
 
-  const toggleSubmenu = (menu: string) => {
-    setOpenSubmenu(openSubmenu === menu ? null : menu);
-  };
+  // const toggleSubmenu = (menu: string) => {
+  //   setOpenSubmenu(openSubmenu === menu ? null : menu);
+  // };
 
   return (
     <header className="shadow-md sticky w-full z-20 left-0 top-0 bg-[#103778]">
@@ -40,53 +41,80 @@ const closeMenu = () => {
             isOpen ? 'block' : 'hidden'
           } absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow md:shadow-none z-40`}
         >
-          <ul className="flex flex-col md:flex-row w-full md:w-auto uppercase font-bold font-fam">
+          <ul className="flex flex-col md:flex-row w-full md:w-auto capitalize font-bold font-fam-one capitalize text-lg">
             <li>
-              <Link to="/" onClick={closeMenu} className="link-underline inline-block px-3 py-5 text-black hover:text-gray-300 md:text-white transition">
+              <Link to="/" onClick={closeMenu} className="link-underline inline-block px-4 py-3 text-black hover:text-gray-300 md:text-white transition">
                 Inicio
               </Link>
             </li>
             {/* Submenú */}
             <li className="relative group">
               <button
-                onClick={() => toggleSubmenu('servicios')}
-                className="flex items uppercase center font-fam justify-between w-full px-3 py-5 text-black md:text-white hover:text-gray-300 transition"
+                type="button"
+                className="flex items-center justify-between w-full px-4 py-3 text-black transition-colors duration-200 md:text-white hover:text-gray-300"
               >
-                Servicios ▾
+                Servicios
+                <ChevronDown
+                  className="w-5 h-5 ml-1 transform transition-transform duration-300 group-hover:rotate-180"
+                />
               </button>
+
               <ul
                 className={`
                   absolute left-0 top-full bg-white shadow-md min-w-[210px] z-50
                   transition-all duration-300 ease-in-out origin-top transform overflow-hidden
-                  md:group-hover:max-h-96 md:group-hover:opacity-100 md:group-hover:scale-y-100
-                  ${openSubmenu === 'servicios' ? 'max-h-96 opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-y-95'}
-                  `}
+                  max-h-0 opacity-0 scale-y-95
+                  group-hover:max-h-96 group-hover:opacity-100 group-hover:scale-y-100
+                `}
               >
-                <li><Link to="/servicios/contabilidad" onClick={closeMenu} className="capitalize block px-4 py-2 hover:bg-gray-100">Asesoría Contable</Link></li>
-                <li><Link to="/servicios/finanzas" onClick={closeMenu} className="capitalize block px-4 py-2 hover:bg-gray-100">Asesoría Financiera</Link></li>
-                <li><Link to="/servicios/tributo" onClick={closeMenu} className="capitalize block px-4 py-2 hover:bg-gray-100">Asesoría Tributaria</Link></li>
-                <li><Link to="/servicios/laboral" onClick={closeMenu} className="capitalize block px-4 py-2 hover:bg-gray-100">Asesoría Laboral</Link></li>
+                <li>
+                  <Link
+                    to="/servicios/contabilidad"
+                    className="capitalize block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Asesoría Contable
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/servicios/finanzas"
+                    className="capitalize block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Asesoría Financiera
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/servicios/tributo"
+                    className="capitalize block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Asesoría Tributaria
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/servicios/laboral"
+                    className="capitalize block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Asesoría Laboral
+                  </Link>
+                </li>
               </ul>
             </li>
 
             <li>
-              <Link to="/nosotros" onClick={closeMenu} className="link-underline block px-3 py-5 text-black md:text-white hover:text-gray-300 transition">
+              <Link to="/nosotros" onClick={closeMenu} className="link-underline block px-4 py-3 text-black md:text-white hover:text-gray-300 transition">
                 Nosotros
               </Link>
             </li>
             <li>
-              <Link to="/cursos" onClick={closeMenu} className="link-underline block px-3 py-5 text-black md:text-white hover:text-gray-300">
+              <Link to="/cursos" onClick={closeMenu} className="link-underline block px-4 py-3 text-black md:text-white hover:text-gray-300">
                 Talleres
               </Link>
             </li>
             <li>
-              <Link to="/blog" onClick={closeMenu} className="link-underline block px-3 py-5 text-black md:text-white hover:text-gray-300">
+              <Link to="/blog" onClick={closeMenu} className="link-underline block px-4 py-3 text-black md:text-white hover:text-gray-300">
                 Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/contacto" onClick={closeMenu} className="link-underline block px-3 py-5 text-black md:text-white hover:text-gray-300">
-                Contacto
               </Link>
             </li>
 
@@ -106,8 +134,11 @@ const closeMenu = () => {
 
         {/* Botones escritorio (login + registro) */}
         <div className="hidden md:flex items-center space-x-3">
-          <Link to="/login" onClick={closeMenu} className="px-5 py-2 text-[#103778] font-bold bg-white rounded-full hover:bg-[#791137] hover:text-white transition">
-            Iniciar Sesión<i className="fa-regular fa-user ml-2"></i>
+          <Link to="/login" onClick={closeMenu} className="px-2 py-2 text-white font-bold rounded-full">
+            <i className="fa-regular fa-user"></i>
+          </Link>
+          <Link to="/contacto" className='px-5 py-2 text-[#103778] font-bold bg-white rounded-full hover:bg-[#791137] hover:text-white transition'>
+            Contacto <span className="">→</span>
           </Link>
           {/* <Link to="/registro" onClick={closeMenu} className="px-5 py-2 text-[#103778] font-bold bg-white rounded-full hover:bg-[#103778] hover:text-white transition">
             Registrarse

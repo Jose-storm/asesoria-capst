@@ -40,7 +40,7 @@ const Home = () => {
             href="/Contacto"
             className="inline-block rounded-full bg-gradient-to-r from-[#791137] via-pink-600 to-[#791137] bg-[length:200%_auto] bg-position-0 hover:bg-[position:100%_0] px-8 py-3 text-white text-lg font-fam-ge font-semibold transition-all duration-500 ease-in-out"
           >
-            Agenda tu consulta gratuita
+            Agenda tu consulta gratuita<span className="ml-2">→</span>
           </a>
           </div>
         </div>

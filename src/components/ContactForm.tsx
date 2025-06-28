@@ -26,6 +26,12 @@ const ContactForm = () => {
                 {/* Formulario funcional */}
                 <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 bg-white p-6 rounded-lg shadow-md">
                     <div>
+                        <h2 className="text-3xl font-bold text-gray-800 font-fam-ge">¿Tienes alguna pregunta?</h2>
+                        <p className="text-gray-600 font-fam mt-2">
+                            Por favor, completa el siguiente formulario
+                        </p>
+                    </div>
+                    <div>
                         <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-1">Nombre completo</label>
                         <input
                             id="nombre"

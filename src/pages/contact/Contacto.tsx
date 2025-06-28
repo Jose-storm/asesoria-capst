@@ -15,29 +15,61 @@ const Contacto = () => {
                     {/* Contenido centrado */}
                     <div className="relative z-10 flex items-center justify-center h-full">
                     <div className="text-center px-4 sm:px-8 max-w-3xl text-white">
+                        <p className="text-base">Asesoría Empresarial</p>
                         <h1 className="text-3xl sm:text-5xl font-bold leading-tight font-fam-ge">
-                        Contacto
+                        Contáctenos
                         </h1>
-                        <p className="mt-6 text-base sm:text-lg font-fam-ge">
-                        Asesoría empresarial estratégica para ayudarte a tomar decisiones inteligentes,
-                        optimizar procesos y lograr un crecimiento sostenible. Más de 10 años acompañando
-                        a emprendedores y empresas en su camino al éxito.
-                        </p>
                     </div>
                     </div>
                 </div>
             </section>
             <section className="max-w-6xl mx-auto px-0 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                    {/* Texto descriptivo */}
-                    <div className="font-fam-ge">
-                    <h2 className="text-4xl font-bold mb-6 text-blue-700">Hablemos</h2>
-                    <p className="text-lg text-gray-700 mb-4">
-                        ¿Tienes preguntas o deseas una asesoría personalizada? Llena el formulario y uno de nuestros especialistas se pondrá en contacto contigo lo antes posible.
-                    </p>
-                    <p className="text-gray-600">
-                        Estamos comprometidos en brindarte una atención profesional y rápida. Ya sea que necesites orientación empresarial, resolver dudas o simplemente quieras conocernos más, estamos aquí para ti.
-                    </p>
+                {/* Texto descriptivo */}
+                    <div className="flex flex-col font-fam-desk">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6 font-fam-ge">
+                            Contáctanos <br />fácilmente
+                        </h2>
+                        <p className="text-base mb-6 font-fam">
+                            Ya sea que estés interesado en adoptar, ser voluntario, donar o simplemente conocer más
+                            sobre nuestro trabajo, no dudes en escribirnos.
+                        </p>
+
+                        <ul className="space-y-4 text-gray-800 text-md font-fam">
+                            {/* Teléfono */}
+                            <li className="flex items-start gap-3">
+                                <div>
+                                <a
+                                    href="tel:+51955288116"
+                                    className="block hover:text-blue-500 transition-colors mb-2"
+                                >
+                                    <i className="fa-solid fa-phone text-blue-400 text-lg mr-2"></i>
+                                    +51 955 288 116
+                                </a>
+                                <p className="text-gray-600 text-base">
+                                    Lunes a Viernes 8:00am - 20:00pm<br />
+                                    Sábados y domingos 8:00am - 17:00pm
+                                </p>
+                                </div>
+                            </li>
+
+                            {/* Correo */}
+                            <li className="flex items-start gap-3">
+                                <div>
+                                <a
+                                    href="mailto:albergue.adoptasalvavidas@gmail.com"
+                                    className="block hover:text-blue-500 transition-colors break-all"
+                                >
+                                    <i className="fa-solid fa-envelope text-blue-400 text-lg mr-2"></i>
+                                    asesoriaempresarial.info@gmail.com
+                                </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <p className="mt-6 text-gray-600 text-lg font-fam">
+                            Nuestro equipo está listo para brindarte toda la información que necesites. 
+                            ¡Gracias por apoyar una causa que da esperanza!
+                        </p>
                     </div>
 
                     {/* Formulario de contacto */}

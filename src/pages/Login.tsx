@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
+import ImgL from "@/assets/img/Inicio_two.png"
 import API from "@/api/axios";
 
 const Login = () => {
@@ -14,17 +15,6 @@ const Login = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   setError(""); // limpiar errores anteriores
-  //   try {
-  //     const res = await API.post("/auth/login", form); // debe devolver { token, role }
-  //     login(res.data.token, res.data.usuario.rol_id === 1 ? "admin" : "user");
-  //     // No navegamos directamente aquí
-  //   } catch (err) {
-  //     setError("Credenciales incorrectas.");
-  //   }
-  // };
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setError("");
@@ -45,16 +35,6 @@ const Login = () => {
     setError("Credenciales incorrectas.");
   }
 };
-
-
-  // useEffect(() => {
-  //   if (token && isAdmin) {
-  //     if (window.location.pathname !== "/admin") {
-  //       navigate("/admin");
-  //     }
-  //   }
-  // }, [token, isAdmin, navigate]);
-
   return (
     <section className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="flex flex-col md:flex-row bg-white shadow-2xl overflow-hidden max-w-4xl w-full font-fam-ge">
@@ -70,6 +50,13 @@ const Login = () => {
 
         {/* Formulario con detalles */}
         <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+          <div className="flex justify-center mb-2">
+            <img
+              src={ImgL}
+              alt="Logo de la empresa"
+              className="h-20 w-auto" // Ajusta tamaño según tu diseño
+            />
+          </div>
           <h2 className="text-3xl font-bold mb-2 text-center text-gray-800">Inicio de Sesión</h2>
           <p className="text-center text-sm text-gray-500 mb-6">
             Ingresa tus credenciales para acceder al panel de gestión del sistema.

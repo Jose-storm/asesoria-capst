@@ -3,7 +3,7 @@
 */
 import CursoCard from "@/components/curso-card/CursoCard";
 import { cursos } from "@/types/curso";
-
+import ImgT from "@/assets/img/taller_one.jpg"
 const Cursos = () => {
     return (
         /* Sección 1 */
@@ -11,7 +11,7 @@ const Cursos = () => {
             <section className="w-full bg-gradient-to-r from-white to-gray-50 shadow-md">
                 <div className="relative w-full h-80 sm:h-96 lg:h-[21rem] overflow-hidden">
                     <img
-                    src="/src/assets/img/taller.jpg"
+                    src={ImgT}
                     alt="Publicidad"
                     className="absolute inset-0 w-full h-full object-cover object-center"
                     />
@@ -20,25 +20,24 @@ const Cursos = () => {
 
                     {/* Contenido centrado */}
                     <div className="relative z-10 flex items-center justify-center h-full">
-                    <div className="text-center px-4 sm:px-8 max-w-3xl text-white">
-                        <h1 className="text-3xl sm:text-5xl font-bold leading-tight font-fam-ge">
-                        Talleres especializados
-                        </h1>
-                        <p className="mt-6 text-base sm:text-lg font-fam-ge">
-                        Asesoría empresarial estratégica para ayudarte a tomar decisiones inteligentes,
-                        optimizar procesos y lograr un crecimiento sostenible. Más de 10 años acompañando
-                        a emprendedores y empresas en su camino al éxito.
-                        </p>
-                    </div>
+                        <div className="text-center px-4 sm:px-8 max-w-3xl text-white">
+                            <p className="text-base">Cursos y talleres</p>
+                            <h1 className="text-3xl sm:text-5xl font-bold leading-tight font-fam-ge">
+                                Capacitarte en nuestro objetivo
+                            </h1>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <div className="max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {cursos.map((curso) => (
-                <CursoCard key={curso.id} curso={curso} />
-            ))}
-            </div>
+            {/* Sección de cursos */}
+            <section className="py-16">
+                <div className="max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {cursos.map((curso) => (
+                    <CursoCard key={curso.id} curso={curso} />
+                ))}
+                </div>
+            </section>
         </>
     );
 };
