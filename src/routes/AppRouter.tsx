@@ -14,6 +14,9 @@ import Contacto from "@/pages/contact/Contacto";
 import Cursos from "@/pages/cursos/Cursos";
 import CursoDetail from "@/pages/cursos/CursoDetail";
 import BlogGe from "@/pages/blog/BlogGe";
+import AsesoriaContable from "@/pages/servicio/AsesoriaContable";
+import CursosCRUD from "@/pages/admin/CursosCRUD";
+import DocenteCRUD from "@/pages/admin/DocentesCRUD";
 
 const AppRouter = () => {
     return (
@@ -29,6 +32,7 @@ const AppRouter = () => {
                 <Route path="/cursos" element={<Cursos />} />
                 <Route path="/cursos/:id" element={<CursoDetail />} />
                 <Route path="/blog" element={<BlogGe></BlogGe>}/>
+                <Route path="/asesoria-contable" element={<AsesoriaContable/>}/>
             </Route>
 
             {/* Layout del Administrador */}
@@ -43,6 +47,8 @@ const AppRouter = () => {
             <Route index element={<Dashboard />} />
             <Route path="articulos" element={<ArticulosCRUD />} />
             <Route path="contactos" element={<Contactos />} />
+            <Route path="cursos" element={<CursosCRUD />} />
+            <Route path="docentes" element={<DocenteCRUD />} />
             </Route>
         </Routes>
         </BrowserRouter>

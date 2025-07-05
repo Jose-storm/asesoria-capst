@@ -62,6 +62,22 @@ const AdminLayout = () => {
           >
             <i className="fa-solid fa-envelope mr-2"></i> Mensajes
           </NavLink>
+          <NavLink
+            to="/admin/docentes"
+            className={({ isActive }) =>
+              `hover:text-blue-400 transition ${isActive ? "text-blue-400" : ""}`
+            }
+          >
+            <i className="fa-solid fa-user-tie mr-2"></i> Docentes
+          </NavLink>
+          <NavLink
+            to="/admin/cursos"
+            className={({ isActive }) =>
+              `hover:text-blue-400 transition ${isActive ? "text-blue-400" : ""}`
+            }
+          >
+            <i className="fa-solid fa-book-bookmark mr-2"></i> Cursos
+          </NavLink>
         </nav>
 
         <button

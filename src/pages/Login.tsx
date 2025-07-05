@@ -88,7 +88,7 @@ const Login = () => {
               type="submit"
               className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition duration-300"
             >
-              Ingresar
+              Ingresar <i className="ml-2 fa-solid fa-arrow-right-to-bracket"></i>
             </button>
             {error && <p className="text-red-500 mt-2 text-sm">{error}</p>}
           </form>

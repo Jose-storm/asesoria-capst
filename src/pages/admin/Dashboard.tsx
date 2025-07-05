@@ -16,8 +16,10 @@ const InicioAdmin = () => {
             <ul className="list-disc list-inside text-gray-700 font-fam">
               <li>Gestionar artículos y publicaciones.</li>
               <li>Revisar y responder formularios de contacto.</li>
-              <li>Visualizar estadísticas del sitio.</li>
               <li>Actualizar información institucional.</li>
+              <li>Registrar Docentes de cursos.</li>
+              <li>Gestionar Talleres o cursos a brindar.</li>
+
             </ul>
           </div>
 

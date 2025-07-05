@@ -5,7 +5,7 @@ import type { Article } from "../../types";
 import { useAuth } from "../../hooks/useAuth";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { storage } from "@/lib/Firebase";
-
+import Swal from 'sweetalert2';
 const API_URL = "/articulos";
 
 const ArticulosCRUD = () => {
@@ -52,21 +52,74 @@ const ArticulosCRUD = () => {
   const handleInput = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setNuevoArticulo({ ...nuevoArticulo, [e.target.name]: e.target.value });
   };
-
+  /* Modificación de Sweetalert2 */
+  // const crearArticulo = async () => {
+  //   await axios.post(API_URL, nuevoArticulo, {
+  //     headers: { Authorization: `Bearer ${token}` },
+  //   });
+  //   setNuevoArticulo({ titulo: "", contenido: "", imagen: "", extracto: "", autor_nombre: "" });
+  //   fetchArticulos();
+  // };
   const crearArticulo = async () => {
+  try {
     await axios.post(API_URL, nuevoArticulo, {
       headers: { Authorization: `Bearer ${token}` },
     });
-    setNuevoArticulo({ titulo: "", contenido: "", imagen: "", extracto: "", autor_nombre: "" });
+
+    setNuevoArticulo({
+      titulo: "",
+      contenido: "",
+      imagen: "",
+      extracto: "",
+      autor_nombre: "",
+    });
+
     fetchArticulos();
+
+    Swal.fire({
+      title: '¡Artículo creado!',
+      text: 'El nuevo artículo ha sido registrado correctamente.',
+      icon: 'success',
+      confirmButtonColor: '#103778',
+    });
+  } catch (error) {
+    Swal.fire({
+      title: 'Error',
+      text: 'No se pudo crear el artículo.',
+      icon: 'error',
+      confirmButtonColor: '#d33',
+    });
+  }
   };
 
   const eliminarArticulo = async (id: number) => {
+  const result = await Swal.fire({
+    title: '¿Eliminar artículo?',
+    text: 'Esta acción no se puede deshacer.',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#d33',
+    cancelButtonColor: '#aaa',
+    confirmButtonText: 'Sí, eliminar',
+    cancelButtonText: 'Cancelar',
+  });
+
+  if (result.isConfirmed) {
+    // Eliminar solo si el usuario confirmó
     await axios.delete(`${API_URL}/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
+
     fetchArticulos();
-  };
+
+    Swal.fire({
+      title: '¡Eliminado!',
+      text: 'El artículo ha sido eliminado correctamente.',
+      icon: 'success',
+      confirmButtonColor: '#103778',
+    });
+  }
+};
 
   // Función que verifica si hay datos no guardados
   const hayCambiosNoGuardados = () => {
@@ -87,14 +140,7 @@ const ArticulosCRUD = () => {
   return (
     
     <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg shadow-md font-fam-ge">
-      <button
-        onClick={volverDashboard}
-        className="mb-4 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold px-4 py-2 rounded"
-      >
-        ← Volver al Dashboard
-      </button>
-
-      <h2 className="text-2xl font-bold mb-6 text-center">Gestión de Artículos</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center">Gestión de Artículos</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 items-start">
         {/* Columna de etiquetas */}
@@ -190,7 +236,7 @@ const ArticulosCRUD = () => {
         onClick={crearArticulo}
         className="btn-primary bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full transition-colors w-full mb-10"
       >
-        Crear
+        Crear Artículo<i className="ml-2 fa-solid fa-plus"></i>
       </button>
 
       {/* Lista de artículos */}

@@ -69,7 +69,7 @@ const closeMenu = () => {
               >
                 <li>
                   <Link
-                    to="/servicios/contabilidad"
+                    to="/asesoria-contable"
                     className="capitalize block px-4 py-2 hover:bg-gray-100"
                   >
                     Asesoría Contable
@@ -77,7 +77,7 @@ const closeMenu = () => {
                 </li>
                 <li>
                   <Link
-                    to="/servicios/finanzas"
+                    to="/asesoria-financiera"
                     className="capitalize block px-4 py-2 hover:bg-gray-100"
                   >
                     Asesoría Financiera
@@ -85,7 +85,7 @@ const closeMenu = () => {
                 </li>
                 <li>
                   <Link
-                    to="/servicios/tributo"
+                    to="/asesoria-tributaria"
                     className="capitalize block px-4 py-2 hover:bg-gray-100"
                   >
                     Asesoría Tributaria
@@ -93,7 +93,7 @@ const closeMenu = () => {
                 </li>
                 <li>
                   <Link
-                    to="/servicios/laboral"
+                    to="/asesoria-laboral"
                     className="capitalize block px-4 py-2 hover:bg-gray-100"
                   >
                     Asesoría Laboral
