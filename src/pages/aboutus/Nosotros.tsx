@@ -2,6 +2,7 @@ import React from "react";
 import EquipoN from "./EquipoN";
 import NosotrosDescription from "@/components/nosotros/NosotrosDescription";
 import NosotrosVideo from "@/components/nosotros/NosotrosVideo";
+import ImgAb from "@/assets/img/taller.jpg"
 
 const Nosotros: React.FC = () => {
 return (
@@ -10,7 +11,7 @@ return (
         <section className="w-full bg-gradient-to-r from-white to-gray-50 shadow-md">
                 <div className="relative w-full h-80 sm:h-96 lg:h-[21rem] overflow-hidden">
                     <img
-                    src="/src/assets/img/taller.jpg"
+                    src={ImgAb}
                     alt="Publicidad"
                     className="absolute inset-0 w-full h-full object-cover object-center"
                     />

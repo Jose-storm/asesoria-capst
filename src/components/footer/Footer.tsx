@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ImgFoo from "@/assets/img/ae_logo.png"
 
 const enlaces = [
     { nombre: "Inicio", href: "/" },
     { nombre: "Servicios", href: "/servicios" },
     { nombre: "Nosotros", href: "/nosotros" },
+    { nombre: "Talleres", href: "/cursos" },
     { nombre: "Contacto", href: "/contacto" },
-    { nombre: "Blogs", href: "/blogs" },
+    { nombre: "Blog", href: "/blog" },
 ];
 
 const Footer: React.FC = () => {
@@ -15,7 +17,7 @@ return (
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 items-start pb-10">
             <Link to="/">
             <img
-                src="/img/ae_logo.png"  // Cambia por la ruta de tu logo
+                src={ImgFoo}
                 alt="Logo Asesoría Empresarial"
                 className="h-16 w-auto"
             />
@@ -23,20 +25,20 @@ return (
 
             {/* Enlaces de navegación */}
             <div className="justify-center md:justify-start gap-4 font-fam-ge">
-            {enlaces.map((enlace) => (
-                <ul>
-                    <li className="block h-8">
-                        <Link
-                        key={enlace.nombre}
-                        to={enlace.href}
-                        className="link-underline text-gray-400 hover:text-white transition-colors duration-300"
-                        >
-                        {enlace.nombre}
-                        </Link>
-                    </li>
-                </ul>
-            ))}
+            <ul>
+                {enlaces.map((enlace) => (
+                <li key={enlace.nombre} className="block h-8">
+                    <Link
+                    to={enlace.href}
+                    className="link-underline text-gray-400 hover:text-white transition-colors duration-300"
+                    >
+                    {enlace.nombre}
+                    </Link>
+                </li>
+                ))}
+            </ul>
             </div>
+
             {/* Contacto */}
             <div className="justify-center md:justify-start gap-4 font-fam-ge">
                 <h2 className="bold mb-2">Contacto</h2>

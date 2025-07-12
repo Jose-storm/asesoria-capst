@@ -25,7 +25,7 @@ export default function DocenteCRUD() {
         setNuevoDocente({ nombre: "", carrera: "" });
         fetchDocentes();
         } catch (error) {
-        console.error("Error al crear docente", error);
+        Swal.fire("Error", "No se pudo crear el curso.", "error");
         }
     };
 

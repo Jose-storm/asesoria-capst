@@ -17,6 +17,9 @@ import BlogGe from "@/pages/blog/BlogGe";
 import AsesoriaContable from "@/pages/servicio/AsesoriaContable";
 import CursosCRUD from "@/pages/admin/CursosCRUD";
 import DocenteCRUD from "@/pages/admin/DocentesCRUD";
+import AsesoriaFinanciera from "@/pages/servicio/AsesoriaFinanciera";
+import AsesoriaTributaria from "@/pages/servicio/AsesoriaTributaria";
+import AsesoriaLaboral from "@/pages/servicio/AsesoriaLaboral";
 
 const AppRouter = () => {
     return (
@@ -33,6 +36,9 @@ const AppRouter = () => {
                 <Route path="/cursos/:id" element={<CursoDetail />} />
                 <Route path="/blog" element={<BlogGe></BlogGe>}/>
                 <Route path="/asesoria-contable" element={<AsesoriaContable/>}/>
+                <Route path="/asesoria-financiera" element={<AsesoriaFinanciera/>}/>
+                <Route path="/asesoria-tributaria" element={<AsesoriaTributaria/>}/>
+                <Route path="/asesoria-laboral" element={<AsesoriaLaboral/>}/>
             </Route>
 
             {/* Layout del Administrador */}

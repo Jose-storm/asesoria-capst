@@ -13,7 +13,7 @@ const ArticleCard = ({ articulo }: { articulo: Article }) => {
       <div className="p-5">
         <h3 className="text-xl font-semibold text-gray-800 mb-1">{articulo.titulo}</h3>
         <p className="text-sm text-gray-500 mb-3">
-          por <span className="font-medium">{articulo.autor}</span> &middot;{" "}
+          por <span className="font-medium">{articulo.autor_nombre}</span> &middot;{" "}
           {new Date(articulo.creado_en || "").toLocaleDateString()}
         </p>
         <p className="text-gray-700 mb-4 line-clamp-3 font-fam-ge">{articulo.extracto}</p>

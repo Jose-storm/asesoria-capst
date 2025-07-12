@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { ChevronDown } from "lucide-react";
+import Imgll from "@/assets/img/ae_logo.png"
 
 export default function Header() {
 const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -13,18 +14,13 @@ const closeMenu = () => {
     setIsOpen(false);
     setOpenSubmenu(null);
   };
-
-  // const toggleSubmenu = (menu: string) => {
-  //   setOpenSubmenu(openSubmenu === menu ? null : menu);
-  // };
-
   return (
     <header className="shadow-md sticky w-full z-20 left-0 top-0 bg-[#103778]">
       <div className="flex justify-between items-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-5 h-16 bg-[#103778]">
         {/* Logo */}
         <Link to="/">
           <img
-            src="/img/ae_logo.png"
+            src={Imgll}
             alt="Logo Asesoría Empresarial"
             className="h-16 w-auto"
           />

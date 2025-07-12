@@ -4,7 +4,7 @@ export interface Article {
   contenido: string;
   extracto: string;
   imagen: string;
-  autor: string;
+  autor_nombre: string;
   creado_en?: string;
 }
 

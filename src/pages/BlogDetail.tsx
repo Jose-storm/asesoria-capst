@@ -52,7 +52,7 @@ const BlogDetail = () => {
             />
             <h1 className="text-4xl font-bold mb-2 text-gray-800">{article.titulo}</h1>
             <div className="flex items-center gap-4 text-sm text-gray-500 mb-6 mt-6">
-              <p><span className="font-medium text-gray-700">{article.autor}</span></p>
+              <p><span className="font-medium text-gray-700">{article.autor_nombre}</span></p>
               <span className="text-gray-400">|</span>
               <p>Fecha de publicación: {new Date(article.creado_en || "").toLocaleDateString()}</p>
             </div>
