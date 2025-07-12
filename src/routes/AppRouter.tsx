@@ -20,6 +20,8 @@ import DocenteCRUD from "@/pages/admin/DocentesCRUD";
 import AsesoriaFinanciera from "@/pages/servicio/AsesoriaFinanciera";
 import AsesoriaTributaria from "@/pages/servicio/AsesoriaTributaria";
 import AsesoriaLaboral from "@/pages/servicio/AsesoriaLaboral";
+import ErrorPage from "@/pages/support/ErrorPage";
+import PoliticasPrivacity from "@/pages/support/PoliticasPrivacity";
 
 const AppRouter = () => {
     return (
@@ -39,6 +41,7 @@ const AppRouter = () => {
                 <Route path="/asesoria-financiera" element={<AsesoriaFinanciera/>}/>
                 <Route path="/asesoria-tributaria" element={<AsesoriaTributaria/>}/>
                 <Route path="/asesoria-laboral" element={<AsesoriaLaboral/>}/>
+                <Route path="/politica-privacidad" element={<PoliticasPrivacity/>}/>
             </Route>
 
             {/* Layout del Administrador */}
@@ -56,6 +59,7 @@ const AppRouter = () => {
             <Route path="cursos" element={<CursosCRUD />} />
             <Route path="docentes" element={<DocenteCRUD />} />
             </Route>
+            <Route path="*" element={<ErrorPage />} />
         </Routes>
         </BrowserRouter>
     );

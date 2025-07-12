@@ -4,7 +4,6 @@ import ImgFoo from "@/assets/img/ae_logo.png"
 
 const enlaces = [
     { nombre: "Inicio", href: "/" },
-    { nombre: "Servicios", href: "/servicios" },
     { nombre: "Nosotros", href: "/nosotros" },
     { nombre: "Talleres", href: "/cursos" },
     { nombre: "Contacto", href: "/contacto" },
@@ -78,6 +77,9 @@ return (
         </div>
         <div className="max-w-7xl mx-auto text-center text-sm text-gray-500 p-3 border-t border-gray-300 my-3 font-fam-ge">
             &copy; {new Date().getFullYear()} Asesoría Empresarial. Todos los derechos reservados.
+            <Link to="/politica-privacidad" className="ml-2 link-underline text-gray-400 hover:text-white transition-colors duration-300">
+                Políticas de Privacidad
+            </Link>
         </div>
     </footer>
 );

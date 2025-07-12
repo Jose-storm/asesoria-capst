@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import ImgL from "@/assets/img/Inicio_two.png"
+import ImgInit from "@/assets/img/login_ae.jpg"
 import API from "@/api/axios";
 
 const Login = () => {
@@ -42,7 +43,7 @@ const Login = () => {
         {/* Imagen lateral */}
         <div className="hidden md:block md:w-1/2">
           <img
-            src="src/assets/img/login_ae.jpg"
+            src={ImgInit}
             alt="Login"
             className="w-full h-full object-cover"
           />

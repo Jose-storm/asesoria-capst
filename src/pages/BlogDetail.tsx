@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "@/api/axios";
+import ImgBlog from "@/assets/img/publi_one.jpg"
 import type { Article } from "@/types";
 
 const BlogDetail = () => {
@@ -29,10 +30,10 @@ const BlogDetail = () => {
   return (
     <>
       {/* Imagen de Publicidad Superior */}
-      <section className="max-w-7xl mx-auto w-full bg-gradient-to-r from-white to-gray-50 shadow-md rounded-lg">
+      <section className="mx-auto w-full bg-gradient-to-r from-white to-gray-50 shadow-md rounded-lg">
         <div className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration w-full">
           <img
-            src="/src/assets/img/publi_one.jpg"
+            src={ImgBlog}
             alt="Publicidad"
             className="w-full h-42 object-cover bg-center duration-300"
           />

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import ImgPre from "@/assets/img/ae_pre.png"
 
 type Pregunta = {
     id: string;
@@ -48,7 +49,7 @@ const PreguntasFre: React.FC = () => {
                 {/* Imagen */}
                 <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
                 <img
-                    src="/src/assets/img/ae_pre.png"
+                    src={ImgPre}
                     alt="Preguntas Frecuentes Asesoría Empresarial"
                     className="w-full h-auto object-contain"
                 />

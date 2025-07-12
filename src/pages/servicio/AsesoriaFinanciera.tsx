@@ -1,5 +1,5 @@
 import ImgF from "@/assets/img/finanza.jpg"
-import ImgCd from "@/assets/img/acont_one.png"
+import ImgCd from "@/assets/img/tributaria_one.png"
 
 export default function AsesoriaFinanciera(){
 

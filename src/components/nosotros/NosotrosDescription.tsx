@@ -1,5 +1,5 @@
 //sección de Descripción de nosotros
-import ImgaN from "@/assets/img/nosotros_one.jpg"
+import ImgaN from "@/assets/img/Note.jpg"
 
 export default function NosotrosDescription(){
     return(
@@ -9,7 +9,7 @@ export default function NosotrosDescription(){
                     {/* Imagen */}
                     <div className="w-full h-full">
                     <img
-                        src={ImgaN} // Reemplaza con tu imagen real
+                        src={ImgaN}
                         alt="Nosotros"
                         className="w-full h-full"
                     />

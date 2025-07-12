@@ -1,4 +1,5 @@
-import ImgT from "@/assets/img/finanza.jpg"
+import ImgT from "@/assets/img/asesoria_tributaria.jpg"
+import ImgCd from "@/assets/img/tributaria_one.png"
 
 export default function AsesoriaTributaria(){
     return(
@@ -21,6 +22,33 @@ export default function AsesoriaTributaria(){
                                 Asesoría Tributaria
                             </h1>
                         </div>
+                    </div>
+                </div>
+            </section>
+            {/* Posibilidad de segmentarlo por componentes */}
+            <section className="bg-white py-16 px-6">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    
+                    {/* Descripción */}
+                    <div className="text-gray-800 font-fam-ge">
+                    <h2 className="text-4xl font-bold font-fam mb-4 leading-tight">
+                        Optimizando <span className="text-[#103778]">la gestión del talento</span> con nuestra Asesoría Laboral
+                    </h2>
+                    <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                        En <strong>Asesoría Empresarial</strong>, ofrecemos servicios especializados en <strong>asesoría laboral</strong> para pequeñas y medianas empresas, ayudándolas a cumplir con la normativa vigente y a establecer relaciones laborales justas, estables y eficientes.
+                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                        Desde la elaboración de contratos hasta la implementación de políticas internas y manejo de planillas, nuestro acompañamiento permite reducir riesgos legales y mejorar la productividad, fomentando un clima laboral saludable y alineado con los objetivos del negocio.
+                    </p>
+                    </div>
+
+                    {/* Imagen */}
+                    <div className="w-full h-auto flex justify-center items-center">
+                    <img
+                        src={ImgCd}
+                        alt="Asesoría Laboral"
+                        className="w-full h-auto"
+                    />
                     </div>
                 </div>
             </section>

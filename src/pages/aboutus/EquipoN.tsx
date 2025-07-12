@@ -1,5 +1,9 @@
 import React from "react";
-
+import ImgNone from "@/assets/img/profesional_one.jpg"
+import ImgNtwo from "@/assets/img/profesional_two.jpg"
+import ImgNtree from "@/assets/img/profesional_tree.jpg"
+import ImgNfour from "@/assets/img/profesional_six.jpg"
+import ImgNfive from "@/assets/img/profesional_five.jpg"
 /* Interface-objeto */
 type Equipo ={
     id: number,
@@ -12,31 +16,31 @@ const equipos_carrera: Equipo[] =[
     {
         id: 1,
         nombreCompleto: "Martín Fernandez",
-        imagen: "/src/assets/img/profesional_one.jpg",
-        profesion: "Administración de Empresas"
+        imagen: ImgNone,
+        profesion: "Admnistración de Empresas"
     },
     {
         id: 2,
         nombreCompleto: "Julio Zapata",
-        imagen: "/src/assets/img/profesional_two.jpg",
+        imagen: ImgNtwo,
         profesion: "Contabilidad"
     },
     {
         id: 3,
         nombreCompleto: "Guillermo Perez",
-        imagen: "/src/assets/img/profesional_tree.jpg",
+        imagen: ImgNtree,
         profesion: "Ingeniería Financiera"
     },
     {
         id: 4,
         nombreCompleto: "Pablo Terrones",
-        imagen: "/src/assets/img/profesional_six.jpg",
+        imagen: ImgNfour,
         profesion: "Abogado"
     },
     {
         id: 5,
         nombreCompleto: "Sara Gutierrez",
-        imagen: "/src/assets/img/profesional_five.jpg",
+        imagen: ImgNfive,
         profesion: "Administración Bancaria"
     },
 ]

@@ -4,6 +4,7 @@ import NosotrosGrid from "./components/NosotrosGrid";
 import PreguntasFre from "./components/PreguntasFre";
 import ArticleSection from "./components/ArticleSection";
 import MapsContact from "./components/MapsContact";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -32,8 +33,8 @@ const Home = () => {
           </p>
 
           <div className="mt-8">
-            <a
-              href="/Contacto"
+            <Link
+              to="/Contacto"
               className="inline-block rounded-full bg-gradient-to-r from-[#791137] via-pink-600 to-[#791137]
                         bg-[length:200%_auto] bg-position-0 hover:bg-[position:100%_0]
                         px-8 py-3
@@ -41,7 +42,7 @@ const Home = () => {
                         transition-all duration-500 ease-in-out"
             >
               Agenda tu consulta gratuita<span className="ml-2">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

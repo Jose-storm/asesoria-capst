@@ -1,4 +1,11 @@
 import React from "react";
+import ImgNosotros from "@/assets/img/us_two.jpg"
+import ImgOne from "@/assets/img/objetivo.png"
+import ImgTwo from "@/assets/img/tecno.png"
+import ImgTree from "@/assets/img/cliente.png"
+import ImgFour from "@/assets/img/rendi.png"
+import { Link } from "react-router-dom";
+
 
 type Referencias = {
     id: number;
@@ -13,28 +20,28 @@ const referencia_us: Referencias[]=[
     titulo: "Asesoría estratégica",
     descripcion:
         "Brindamos dirección y claridad para tus objetivos empresariales con planes adaptados a tus necesidades.",
-    imagen: "/src/assets/img/objetivo.png",
+    imagen: ImgOne,
     },
     {
         id: 2,
         titulo: "Transformación digital",
         descripcion:
         "Acompañamos a tu empresa en la modernización de procesos usando herramientas tecnológicas actuales.",
-        imagen: "/src/assets/img/tecno.png",
+        imagen: ImgTwo,
     },
     {
         id: 3,
         titulo: "Atención personalizada",
         descripcion:
         "Cada cliente es único. Nos enfocamos en escuchar, comprender y actuar con soluciones adecuadas.",
-        imagen: "/src/assets/img/cliente.png",
+        imagen: ImgTree,
     },
     {
         id: 4,
         titulo: "Resultados medibles",
         descripcion:
         "Creamos estrategias orientadas a objetivos claros, evaluables y con impacto tangible en tu negocio.",
-        imagen: "/src/assets/img/rendi.png",
+        imagen: ImgFour,
     },
 ]
 
@@ -46,7 +53,7 @@ return (
 
             <div className="h-96 md:h-full">
                 <img
-                    src="/src/assets/img/us_two.jpg"
+                    src={ImgNosotros}
                     alt="Equipo de la empresa"
                     className="w-full h-full object-cover shadow-lg"
                 />
@@ -88,12 +95,12 @@ return (
                 </div>
 
                 <div className="mt-6">
-                    <a
-                    href="/nosotros"
+                    <Link
+                    to="/nosotros"
                     className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition"
                     >
                     Conoce más sobre nosotros<span className="ml-2">→</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

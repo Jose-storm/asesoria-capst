@@ -1,11 +1,13 @@
 import ContactForm from "@/components/ContactForm";
+import ImgCo from "@/assets/img/contact.jpg"
+
 const Contacto = () => {
     return(
         <>
             <section className="w-full bg-gradient-to-r from-white to-gray-50 shadow-md">
                 <div className="relative w-full h-80 sm:h-96 lg:h-[21rem] overflow-hidden">
                     <img
-                    src="/src/assets/img/Contact.jpg"
+                    src={ImgCo}
                     alt="Publicidad"
                     className="absolute inset-0 w-full h-full object-cover object-center"
                     />
