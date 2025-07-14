@@ -1,6 +1,57 @@
 import ImgL from "@/assets/img/laboral_one.jpg"
 import ImgCd from "@/assets/img/tributaria_one.png"
 
+type Servicio = {
+    id: number;
+    titulo: string;
+    descripcion: string;
+    icono: React.ReactNode;
+};
+const serviciosLaborales: Servicio[] = [
+    {
+        id: 1,
+        titulo: 'Elaboración de contratos',
+        descripcion:
+        'Redactamos y actualizamos contratos laborales conforme a la normativa vigente, cuidando cada cláusula para proteger a la empresa y al trabajador.',
+        icono: '📄',
+    },
+    {
+        id: 2,
+        titulo: 'Gestión de planillas',
+        descripcion:
+        'Calculamos sueldos, retenciones y aportes, emitimos boletas electrónicas y llevamos tus planillas al día para evitar contingencias.',
+        icono: '🗂️',
+    },
+    {
+        id: 3,
+        titulo: 'Cumplimiento normativo',
+        descripcion:
+        'Revisamos tus procesos para garantizar el cumplimiento de la legislación laboral y atender fiscalizaciones sin riesgos de sanción.',
+        icono: '🛡️',
+    },
+    {
+        id: 4,
+        titulo: 'Políticas internas y reglamento',
+        descripcion:
+        'Diseñamos políticas de convivencia y reglamentos internos que fomentan un ambiente laboral ordenado y productivo.',
+        icono: '📚',
+    },
+    {
+        id: 5,
+        titulo: 'Liquidación de beneficios sociales',
+        descripcion:
+        'Calculamos CTS, gratificaciones, vacaciones y otros beneficios, asegurando pagos correctos y oportunos a tus colaboradores.',
+        icono: '💰',
+    },
+    {
+        id: 6,
+        titulo: 'Prevención de conflictos',
+        descripcion:
+        'Asesoramos en la resolución temprana de desacuerdos y desarrollamos estrategias para mantener relaciones laborales saludables.',
+        icono: '🤝',
+    },
+];
+
 export default function AsesoriaLaboral(){
 
     return(
@@ -51,6 +102,30 @@ export default function AsesoriaLaboral(){
                         className="w-full h-auto"
                     />
                     </div>
+                </div>
+            </section>
+
+            <section className="bg-gray-50 py-20 px-6">
+                <div className="max-w-6xl mx-auto text-center mb-16">
+                    <h2 className="text-4xl font-bold text-gray-800 mb-6 font-fam">
+                    ¿Cómo te ayudamos con nuestra <span className="text-[#103778]">Asesoría Laboral?</span>
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto font-fam">
+                    Acompañamos a tu empresa en la toma de decisiones estratégicas basadas en datos financieros sólidos, proyecciones realistas y control efectivo del rendimiento económico.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                    {serviciosLaborales.map((item) => (
+                    <div
+                        key={item.id}
+                        className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left flex flex-col gap-4"
+                    >
+                        <div className="text-4xl text-[#103778]">{item.icono}</div>
+                        <h3 className="text-xl font-semibold text-[#103778]">{item.titulo}</h3>
+                        <p className="text-gray-700 leading-relaxed text-base">{item.descripcion}</p>
+                    </div>
+                    ))}
                 </div>
             </section>
         </>

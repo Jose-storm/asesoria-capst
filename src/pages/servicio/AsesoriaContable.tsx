@@ -3,6 +3,61 @@
 import ImgC from "@/assets/img/I_contable.jpg"
 import ImgCd from "@/assets/img/acont_one.png"
 import ImgCS from "@/assets/img/AC_servicio.jpg"
+// data/serviciosContables.ts
+// types.ts o dentro del componente
+type Servicio = {
+  id: number;
+  titulo: string;
+  descripcion: string;
+  icono: React.ReactNode;
+};
+
+const serviciosContable: Servicio[] = [
+    {
+        id: 1,
+        titulo: 'Organización contable',
+        descripcion:
+        'Clasificamos y registramos tus operaciones conforme a las normas contables vigentes, manteniendo tu contabilidad al día.',
+        icono: '📁',
+    },
+    {
+        id: 2,
+        titulo: 'Declaraciones tributarias',
+        descripcion:
+        'Preparamos y presentamos tus impuestos mensuales y anuales cumpliendo con las obligaciones fiscales para evitar sanciones.',
+        icono: '🧾',
+    },
+    {
+        id: 3,
+        titulo: 'Elaboración de estados financieros',
+        descripcion:
+        'Preparamos tus balances, estados de resultados y reportes contables clave para inversionistas, bancos y SUNAT.',
+        icono: '📊',
+    },
+    {
+        id: 4,
+        titulo: 'Asesoría en libros contables',
+        descripcion:
+        'Llevamos y supervisamos tus libros contables obligatorios y electrónicos conforme a lo exigido por la normativa vigente.',
+        icono: '📚',
+    },
+    {
+        id: 5,
+        titulo: 'Soporte contable personalizado',
+        descripcion:
+        'Atendemos tus dudas contables y tributarias de forma clara y profesional, acompañándote en cada etapa del proceso.',
+        icono: '💬',
+    },
+    {
+        id: 6,
+        titulo: 'Adaptación a tu sector',
+        descripcion:
+        'Personalizamos el servicio contable según el rubro de tu empresa: comercio, servicios, construcción, industria u otros.',
+        icono: '⚙️',
+    },
+];
+
+
 
 const features = [
     "Registro y clasificación de operaciones contables",
@@ -45,13 +100,13 @@ export default function AsesoriaContable(){
                     {/* Descripción */}
                     <div className="text-gray-800 font-fam-ge">
                     <h2 className="text-4xl font-bold font-fam mb-4 leading-tight">
-                        Optimizando <span className="text-[#103778]">la gestión del talento</span> con nuestra Asesoría Laboral
+                        Fortalece <span className="text-[#103778]">la salud financiera</span> de tu negocio con nuestra Asesoría Contable
                     </h2>
                     <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                        En <strong>Asesoría Empresarial</strong>, ofrecemos servicios especializados en <strong>asesoría laboral</strong> para pequeñas y medianas empresas, ayudándolas a cumplir con la normativa vigente y a establecer relaciones laborales justas, estables y eficientes.
+                        En <strong>Asesoría Empresarial</strong>, brindamos servicios especializados en <strong>asesoría contable</strong> para pequeñas y medianas empresas, ayudándolas a mantener sus finanzas ordenadas, cumplir con sus obligaciones fiscales y tomar decisiones estratégicas con información precisa.
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed">
-                        Desde la elaboración de contratos hasta la implementación de políticas internas y manejo de planillas, nuestro acompañamiento permite reducir riesgos legales y mejorar la productividad, fomentando un clima laboral saludable y alineado con los objetivos del negocio.
+                        Nos encargamos de la organización contable, elaboración de estados financieros, declaraciones tributarias, y más. Nuestro acompañamiento personalizado te permite enfocarte en hacer crecer tu negocio, mientras nosotros cuidamos de tu contabilidad con responsabilidad y profesionalismo.
                     </p>
                     </div>
 
@@ -59,71 +114,35 @@ export default function AsesoriaContable(){
                     <div className="w-full h-auto flex justify-center items-center">
                     <img
                         src={ImgCd}
-                        alt="Asesoría Laboral"
+                        alt="Asesoría Contable"
                         className="w-full h-auto"
                     />
                     </div>
                 </div>
             </section>
+
             {/* Seccion de información Ayuda recibidad en la asesoría */}
-            <section className="bg-gray-50 py-16 px-6">
-                <div className="max-w-6xl mx-auto text-center mb-12">
-                    <h2 className="text-4xl font-bold text-gray-800 font-fam mb-4">
-                    ¿Qué ayuda puedes recibir con nuestra <span className="text-[#103778]">Asesoría Contable</span>?
+            <section className="bg-gray-50 py-20 px-6">
+                <div className="max-w-6xl mx-auto text-center mb-16">
+                    <h2 className="text-4xl font-bold text-gray-800 mb-6 font-fam">
+                    ¿Cómo te ayudamos con nuestra <span className="text-[#103778]">Asesoría Contable?</span>
                     </h2>
-                    <p className="text-base text-gray-600 font-fam">
-                        Nos convertimos en tu aliado estratégico para que tu empresa mantenga sus finanzas organizadas, cumpla con la ley y crezca con solidez.
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto font-fam">
+                    Acompañamos a tu empresa en la toma de decisiones estratégicas basadas en datos financieros sólidos, proyecciones realistas y control efectivo del rendimiento económico.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    {/* Item 1 */}
-                    <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
-                    <h3 className="text-xl font-semibold text-[#103778] mb-3">Organización contable</h3>
-                    <p className="text-gray-700">
-                        Clasificamos, registramos y controlamos toda tu información financiera conforme a las normas vigentes.
-                    </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                    {serviciosContable.map((item) => (
+                    <div
+                        key={item.id}
+                        className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left flex flex-col gap-4"
+                    >
+                        <div className="text-4xl text-[#103778]">{item.icono}</div>
+                        <h3 className="text-xl font-semibold text-[#103778]">{item.titulo}</h3>
+                        <p className="text-gray-700 leading-relaxed text-base">{item.descripcion}</p>
                     </div>
-
-                    {/* Item 2 */}
-                    <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
-                    <h3 className="text-xl font-semibold text-[#103778] mb-3">Declaraciones tributarias</h3>
-                    <p className="text-gray-700">
-                        Te ayudamos a presentar correctamente tus impuestos, evitando sanciones y optimizando tus recursos.
-                    </p>
-                    </div>
-
-                    {/* Item 3 */}
-                    <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
-                    <h3 className="text-xl font-semibold text-[#103778] mb-3">Análisis financiero</h3>
-                    <p className="text-gray-700">
-                        Evaluamos tu situación financiera para ayudarte a tomar decisiones estratégicas con mayor seguridad.
-                    </p>
-                    </div>
-
-                    {/* Item 4 */}
-                    <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
-                    <h3 className="text-xl font-semibold text-[#103778] mb-3">Elaboración de estados financieros</h3>
-                    <p className="text-gray-700">
-                        Preparamos tus balances, cuentas de resultados y otros reportes esenciales para inversionistas o bancos.
-                    </p>
-                    </div>
-
-                    {/* Item 5 */}
-                    <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
-                    <h3 className="text-xl font-semibold text-[#103778] mb-3">Soporte permanente</h3>
-                    <p className="text-gray-700">
-                        Resolvemos tus consultas contables de forma clara, rápida y con total compromiso profesional.
-                    </p>
-                    </div>
-
-                    {/* Item 6 */}
-                    <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
-                    <h3 className="text-xl font-semibold text-[#103778] mb-3">Adaptación a tu rubro</h3>
-                    <p className="text-gray-700">
-                        Nuestro servicio se ajusta a las necesidades específicas de tu sector, ya seas comercio, servicios o industria.
-                    </p>
-                    </div>
+                    ))}
                 </div>
             </section>
             {/* Sección de servicios de Asesoría contable */}

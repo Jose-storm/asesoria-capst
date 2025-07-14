@@ -1,5 +1,55 @@
 import ImgT from "@/assets/img/asesoria_tributaria.jpg"
-import ImgCd from "@/assets/img/tributaria_one.png"
+import ImgCd from "@/assets/img/tributo_tax.png"
+type Servicio = {
+    id: number;
+    titulo: string;
+    descripcion: string;
+    icono: React.ReactNode;
+};
+const serviciosTributarios: Servicio[] = [
+    {
+        id: 1,
+        titulo: 'Declaraciones de impuestos',
+        descripcion:
+        'Preparamos y presentamos tus tributos mensuales y anuales para que cumplas puntualmente la normativa y evites sanciones.',
+        icono: '🧾',
+    },
+    {
+        id: 2,
+        titulo: 'Planificación fiscal',
+        descripcion:
+        'Diseñamos estrategias legales que optimizan tu carga tributaria, alineadas con los objetivos y proyección de tu empresa.',
+        icono: '🗂️',
+    },
+    {
+        id: 3,
+        titulo: 'Regularización de deudas',
+        descripcion:
+        'Analizamos y negociamos fraccionamientos o refinanciamientos para que regularices tus obligaciones con SUNAT sin afectar tu liquidez.',
+        icono: '💳',
+    },
+    {
+        id: 4,
+        titulo: 'Representación ante SUNAT',
+        descripcion:
+        'Te acompañamos y defendemos durante fiscalizaciones o requerimientos, respondiendo consultas y presentando descargos técnicos.',
+        icono: '⚖️',
+    },
+    {
+        id: 5,
+        titulo: 'Gestión de retenciones y percepciones',
+        descripcion:
+        'Implementamos procedimientos correctos para aplicar, registrar y declarar retenciones y percepciones de IGV e Impuesto a la Renta.',
+        icono: '📑',
+    },
+    {
+        id: 6,
+        titulo: 'Fiscalización preventiva',
+        descripcion:
+        'Auditamos internamente tu documentación contable y tributaria para detectar riesgos y corregirlos antes de inspecciones oficiales.',
+        icono: '🔍',
+    },
+];
 
 export default function AsesoriaTributaria(){
     return(
@@ -32,13 +82,13 @@ export default function AsesoriaTributaria(){
                     {/* Descripción */}
                     <div className="text-gray-800 font-fam-ge">
                     <h2 className="text-4xl font-bold font-fam mb-4 leading-tight">
-                        Optimizando <span className="text-[#103778]">la gestión del talento</span> con nuestra Asesoría Laboral
+                        Cumple <span className="text-[#103778]">con tus obligaciones fiscales</span> con nuestra Asesoría Tributaria
                     </h2>
                     <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                        En <strong>Asesoría Empresarial</strong>, ofrecemos servicios especializados en <strong>asesoría laboral</strong> para pequeñas y medianas empresas, ayudándolas a cumplir con la normativa vigente y a establecer relaciones laborales justas, estables y eficientes.
+                        En <strong>Asesoría Empresarial</strong>, brindamos un servicio especializado en <strong>asesoría tributaria</strong> para pequeñas y medianas empresas, ayudándolas a cumplir con el marco legal vigente y optimizar su carga fiscal de forma responsable.
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed">
-                        Desde la elaboración de contratos hasta la implementación de políticas internas y manejo de planillas, nuestro acompañamiento permite reducir riesgos legales y mejorar la productividad, fomentando un clima laboral saludable y alineado con los objetivos del negocio.
+                        Te asesoramos en la correcta declaración de impuestos, gestión de tributos mensuales y anuales, fiscalizaciones y presentación de información ante SUNAT. Nuestro objetivo es reducir riesgos, evitar sanciones y mantener tu empresa en regla con total tranquilidad.
                     </p>
                     </div>
 
@@ -46,10 +96,34 @@ export default function AsesoriaTributaria(){
                     <div className="w-full h-auto flex justify-center items-center">
                     <img
                         src={ImgCd}
-                        alt="Asesoría Laboral"
+                        alt="Asesoría Tributaria"
                         className="w-full h-auto"
                     />
                     </div>
+                </div>
+            </section>
+
+            <section className="bg-gray-50 py-20 px-6">
+                <div className="max-w-6xl mx-auto text-center mb-16">
+                    <h2 className="text-4xl font-bold text-gray-800 mb-6 font-fam">
+                    ¿Cómo te ayudamos con nuestro <span className="text-[#103778]">Análisis Tributario?</span>
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto font-fam">
+                    Acompañamos a tu empresa en la toma de decisiones estratégicas basadas en datos financieros sólidos, proyecciones realistas y control efectivo del rendimiento económico.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                    {serviciosTributarios.map((item) => (
+                    <div
+                        key={item.id}
+                        className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left flex flex-col gap-4"
+                    >
+                        <div className="text-4xl text-[#103778]">{item.icono}</div>
+                        <h3 className="text-xl font-semibold text-[#103778]">{item.titulo}</h3>
+                        <p className="text-gray-700 leading-relaxed text-base">{item.descripcion}</p>
+                    </div>
+                    ))}
                 </div>
             </section>
         </>

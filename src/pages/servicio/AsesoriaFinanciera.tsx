@@ -1,5 +1,56 @@
 import ImgF from "@/assets/img/finanza.jpg"
-import ImgCd from "@/assets/img/tributaria_one.png"
+import ImgCd from "@/assets/img/finanza_two.png"
+type Servicio = {
+    id: number;
+    titulo: string;
+    descripcion: string;
+    icono: React.ReactNode;
+};
+
+const serviciosFinancieros: Servicio[] = [
+    {
+        id: 1,
+        titulo: 'Diagnóstico financiero integral',
+        descripcion:
+        'Analizamos tus ingresos, costos, activos y pasivos para obtener una visión clara de tu situación económica actual.',
+        icono: '🔍',
+    },
+    {
+        id: 2,
+        titulo: 'Análisis de rentabilidad',
+        descripcion:
+        'Evaluamos la eficiencia de tus operaciones para determinar qué tan rentable es tu negocio y cómo mejorarla.',
+        icono: '💰',
+    },
+    {
+        id: 3,
+        titulo: 'Gestión de flujo de caja',
+        descripcion:
+        'Supervisamos tus ingresos y egresos para asegurar que siempre cuentes con liquidez y capacidad operativa.',
+        icono: '💸',
+    },
+    {
+        id: 4,
+        titulo: 'Evaluación de riesgos financieros',
+        descripcion:
+        'Identificamos y analizamos riesgos financieros potenciales que puedan afectar la estabilidad de tu empresa.',
+        icono: '⚠️',
+    },
+    {
+        id: 5,
+        titulo: 'Planificación y proyecciones',
+        descripcion:
+        'Diseñamos proyecciones financieras a corto y largo plazo para ayudarte a tomar decisiones estratégicas informadas.',
+        icono: '📈',
+    },
+    {
+        id: 6,
+        titulo: 'Indicadores clave de desempeño (KPIs)',
+        descripcion:
+        'Te ayudamos a definir y monitorear métricas financieras clave para que midas el progreso y ajustes estrategias.',
+        icono: '📊',
+    },
+];
 
 export default function AsesoriaFinanciera(){
 
@@ -33,13 +84,13 @@ export default function AsesoriaFinanciera(){
                     {/* Descripción */}
                     <div className="text-gray-800 font-fam-ge">
                     <h2 className="text-4xl font-bold font-fam mb-4 leading-tight">
-                        Optimizando <span className="text-[#103778]">la gestión del talento</span> con nuestra Asesoría Laboral
+                        Impulsa <span className="text-[#103778]">la toma de decisiones</span> con nuestra Asesoría Financiera
                     </h2>
                     <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                        En <strong>Asesoría Empresarial</strong>, ofrecemos servicios especializados en <strong>asesoría laboral</strong> para pequeñas y medianas empresas, ayudándolas a cumplir con la normativa vigente y a establecer relaciones laborales justas, estables y eficientes.
+                        En <strong>Asesoría Empresarial</strong>, brindamos un servicio integral de <strong>asesoría financiera</strong> enfocado en fortalecer la estabilidad y rentabilidad de tu empresa. Analizamos en profundidad tus cifras para ayudarte a tomar decisiones estratégicas y sostenibles.
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed">
-                        Desde la elaboración de contratos hasta la implementación de políticas internas y manejo de planillas, nuestro acompañamiento permite reducir riesgos legales y mejorar la productividad, fomentando un clima laboral saludable y alineado con los objetivos del negocio.
+                        Evaluamos tus estados financieros, proyectamos escenarios futuros, optimizamos el flujo de caja y definimos indicadores clave para que tengas una visión clara de tu situación actual y futura. Nuestro acompañamiento permite que tu empresa crezca con seguridad y eficiencia.
                     </p>
                     </div>
 
@@ -47,10 +98,34 @@ export default function AsesoriaFinanciera(){
                     <div className="w-full h-auto flex justify-center items-center">
                     <img
                         src={ImgCd}
-                        alt="Asesoría Laboral"
+                        alt="Asesoría Financiera"
                         className="w-full h-auto"
                     />
                     </div>
+                </div>
+            </section>
+
+            <section className="bg-gray-50 py-20 px-6">
+                <div className="max-w-6xl mx-auto text-center mb-16">
+                    <h2 className="text-4xl font-bold text-gray-800 mb-6 font-fam">
+                    ¿Cómo te ayudamos con nuestro <span className="text-[#103778]">Análisis Financiero?</span>
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto font-fam">
+                    Acompañamos a tu empresa en la toma de decisiones estratégicas basadas en datos financieros sólidos, proyecciones realistas y control efectivo del rendimiento económico.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                    {serviciosFinancieros.map((item) => (
+                    <div
+                        key={item.id}
+                        className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition duration-300 text-left flex flex-col gap-4"
+                    >
+                        <div className="text-4xl text-[#103778]">{item.icono}</div>
+                        <h3 className="text-xl font-semibold text-[#103778]">{item.titulo}</h3>
+                        <p className="text-gray-700 leading-relaxed text-base">{item.descripcion}</p>
+                    </div>
+                    ))}
                 </div>
             </section>
         </>

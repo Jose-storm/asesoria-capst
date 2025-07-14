@@ -1,4 +1,4 @@
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/components/contacto/ContactForm";
 import ImgCo from "@/assets/img/contact.jpg"
 
 const Contacto = () => {

@@ -1,4 +1,4 @@
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/components/contacto/ContactForm";
 
 //Por ahora aún
 export default function MapsContact(){

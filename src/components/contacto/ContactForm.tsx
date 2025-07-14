@@ -1,5 +1,5 @@
 import { useState } from "react";
-import API from "../api/axios";
+import API from "@/api/axios";
 
 const ContactForm = () => {
     const [form, setForm] = useState({
