@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "@/api/axios";
 import type { Article } from "@/types";
-import ArticleCard from "@/components/ArticleCard";
+import ArticleCard from "@/components/article-card/ArticleCard";
 import ImgBlog from "@/assets/img/espacio_blog.jpg"
 const BlogGe = () => {
     const [articulos, setArticulos] = useState<Article[]>([]);

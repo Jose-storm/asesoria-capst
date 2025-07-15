@@ -97,7 +97,7 @@ export default function DocenteCRUD() {
     /* ─────────  RENDER  ───────── */
     return (
         <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg shadow-md font-fam-ge">
-        <h2 className="text-3xl font-bold mb-6 text-center">Gestión de Docentes</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center">Gestión de Docentes o Tutores</h2>
 
         {/* ─── FORMULARIO CREAR / EDITAR ─── */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 items-start">
@@ -108,7 +108,7 @@ export default function DocenteCRUD() {
             <div className="md:col-span-2 space-y-4">
             <input
                 name="nombre"
-                placeholder="Nombre del docente"
+                placeholder="Nombre del docente o tutor"
                 value={nuevoDocente.nombre}
                 onChange={handleInput}
                 className="w-full border border-gray-300 rounded px-3 py-2"

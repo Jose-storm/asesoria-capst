@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import axios from "@/api/axios";
-import ArticleCard from "@/components/ArticleCard";
+import ArticleCard from "@/components/article-card/ArticleCard";
 import type { Article } from "@/types";
 
 const ArticleSection = () => {
@@ -45,13 +45,12 @@ const ArticleSection = () => {
             Explora nuestros artículos y mantente actualizado con las últimas tendencias del mundo empresarial.
         </p>
 
-        {/* Carrusel con botones mejorados */}
         <div className="relative overflow-hidden">
             {/* Botón izquierdo */}
             <button
             aria-label="Artículo anterior"
             onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white text-[#103778] border border-[#103778] hover:bg-[#103778] hover:text-white transition-colors rounded-full p-3 shadow-lg"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white text-[#103778] border border-[#103778] hover:bg-[#103778] hover:text-white transition-colors rounded-full p-3 shadow-lg"
             >
             <svg
                 className="w-5 h-5"
@@ -74,9 +73,9 @@ const ArticleSection = () => {
                 key={art.id}
                 className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-2 box-border"
                 >
-                <div className="h-full flex flex-col">
-                    <ArticleCard articulo={art} />
-                </div>
+                    <div className="h-full flex flex-col">
+                        <ArticleCard articulo={art} />
+                    </div>
                 </div>
             ))}
             </div>
@@ -85,7 +84,7 @@ const ArticleSection = () => {
             <button
             aria-label="Artículo siguiente"
             onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white text-[#103778] border border-[#103778] hover:bg-[#103778] hover:text-white transition-colors rounded-full p-3 shadow-lg"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white text-[#103778] border border-[#103778] hover:bg-[#103778] hover:text-white transition-colors rounded-full p-3 shadow-lg"
             >
             <svg
                 className="w-5 h-5"

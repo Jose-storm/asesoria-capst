@@ -9,7 +9,7 @@ export interface Article {
 }
 
 export interface Contacto {
-    id?: number;
+    id: number;
     nombre: string;
     email: string;
     telefono?: string;

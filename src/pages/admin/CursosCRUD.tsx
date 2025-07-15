@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
-import axios from "../../api/axios";
-import { useAuth } from "../../hooks/useAuth";
+import axios from "@/api/axios";
+import { useAuth } from "@/hooks/useAuth";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { storage } from "@/lib/Firebase";
 import Swal from "sweetalert2";
-import type { Taller, Docente } from "../../types";
+import type { Taller, Docente } from "@/types";
 
 const API_URL = "/talleres";
 const API_DOCENTES = "/docentes";
@@ -144,7 +144,7 @@ const CursosCRUD = () => {
             <div className="space-y-3 font-semibold text-gray-700 hidden md:block">
             <p>Nombre:</p>
             <p>Modalidad:</p>
-            <p>Docente:</p>
+            <p>Docente o Tutor:</p>
             <p>Tipo de Servicio:</p>
             <p>Fecha / Hora:</p>
             <p>Índice:</p>
@@ -160,7 +160,7 @@ const CursosCRUD = () => {
                 <option value="Virtual">Virtual</option>
             </select>
             <select name="docente_id" value={nuevoTaller.docente_id} onChange={handleInput} className="w-full border border-gray-300 rounded px-3 py-2">
-                <option value="">Seleccione un docente</option>
+                <option value="">Seleccione un docente o tutor</option>
                 {docentes.map((d) => (
                 <option key={d.id} value={d.id}>
                     {d.nombre} - {d.carrera}
@@ -203,7 +203,7 @@ const CursosCRUD = () => {
                 <tr>
                 <th className="px-4 py-3">Nombre</th>
                 <th className="px-4 py-3">Modalidad</th>
-                <th className="px-4 py-3">Docente</th>
+                <th className="px-4 py-3">Tutor</th>
                 <th className="px-4 py-3">Tipo</th>
                 <th className="px-4 py-3">Inicio</th>
                 <th className="px-4 py-3 text-center">Acciones</th>

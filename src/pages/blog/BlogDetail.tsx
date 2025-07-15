@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "@/api/axios";
-import ImgBlog from "@/assets/img/publi_one.jpg"
 import type { Article } from "@/types";
 
 const BlogDetail = () => {
@@ -30,7 +29,7 @@ const BlogDetail = () => {
   return (
     <>
       {/* Imagen de Publicidad Superior */}
-      <section className="mx-auto w-full bg-gradient-to-r from-white to-gray-50 shadow-md rounded-lg">
+      {/* <section className="mx-auto w-full bg-gradient-to-r from-white to-gray-50 shadow-md rounded-lg">
         <div className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration w-full">
           <img
             src={ImgBlog}
@@ -38,7 +37,7 @@ const BlogDetail = () => {
             className="w-full h-42 object-cover bg-center duration-300"
           />
         </div>
-      </section>
+      </section> */}
 
       {/* Contenido principal y aside */}
       <section className="bg-white py-16 px-4">
@@ -64,25 +63,6 @@ const BlogDetail = () => {
 
           {/* Aside: otros artículos + redes + sección CTA */}
           <aside className="space-y-10">
-            {/* Otros artículos */}
-            {/* <div className="bg-white p-4 rounded shadow-md">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">Otros artículos</h2>
-              <ul className="space-y-4">
-                {otrosArticulos.map((a) => (
-                  <li key={a.id}>
-                    <Link
-                      to={`/blog/${a.id}`}
-                      className="text-blue-700 hover:underline block"
-                    >
-                      <p className="font-semibold">{a.titulo}</p>
-                      <p className="text-sm text-gray-500">
-                        {new Date(a.creado_en || "").toLocaleDateString()}
-                      </p>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div> */}
             {/* Otros artículos */}
             <div className="bg-white p-4 rounded shadow-md">
               <h2 className="text-xl font-bold text-gray-800 mb-4">Otros artículos</h2>
@@ -135,7 +115,6 @@ const BlogDetail = () => {
               </ul>
             </div>
 
-            {/* Call to action */}
             <div className="sticky top-17 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 rounded shadow-md text-center">
               <h3 className="text-2xl font-bold mb-2">¡Contáctanos para una asesoría gratuita!</h3>
               <p className="mb-4 text-base">Estamos listos para ayudarte a potenciar tu negocio. Agenda una consulta hoy mismo.</p>

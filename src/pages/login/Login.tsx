@@ -1,7 +1,7 @@
 // export default Login;
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "@/hooks/useAuth";
 import ImgL from "@/assets/img/Inicio_two.png"
 import ImgInit from "@/assets/img/login_ae.jpg"
 import API from "@/api/axios";
@@ -28,7 +28,7 @@ const Login = () => {
     if (rol === "admin") {
       navigate("/admin");
     } else {
-      navigate("/"); // o a donde deba ir un cliente
+      navigate("/"); 
     }
 
   } catch (err) {
@@ -55,7 +55,7 @@ const Login = () => {
             <img
               src={ImgL}
               alt="Logo de la empresa"
-              className="h-20 w-auto" // Ajusta tamaño según tu diseño
+              className="h-20 w-auto"
             />
           </div>
           <h2 className="text-3xl font-bold mb-2 text-center text-gray-800">Inicio de Sesión</h2>

@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 // import { useNavigate } from "react-router-dom";
-import axios from "../../api/axios";
-import type { Article } from "../../types";
-import { useAuth } from "../../hooks/useAuth";
+import axios from "@/api/axios";
+import type { Article } from "@/types";
+import { useAuth } from "@/hooks/useAuth";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { storage } from "@/lib/Firebase";
 import Swal from "sweetalert2";
@@ -183,7 +183,7 @@ const ArticulosCRUD = () => {
                     <i className="fa-solid fa-pen-to-square" />
                   </button>
                   <button onClick={() => eliminarArticulo(a.id)} className="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-full">
-                    <i className="fa-regular fa-trash-can" />
+                    <i className="fa-solid fa-trash" />
                   </button>
                 </td>
               </tr>

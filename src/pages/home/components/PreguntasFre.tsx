@@ -110,16 +110,16 @@ const PreguntasFre: React.FC = () => {
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
                     {/* Teléfono */}
                     <div className="flex flex-col items-center space-y-2">
-                    <div className="text-3xl">📞</div>
+                    <div className="text-3xl"><i className="fa-solid fa-phone mr-2"></i></div>
                     <span className="text-sm text-gray-500 uppercase tracking-wide">Teléfono</span>
-                    <p className="text-base font-medium select-all">+51 987 654 321</p>
+                    <p className="text-base font-medium select-all">+51 993 568 867</p>
                     </div>
 
                     {/* Correo */}
                     <div className="flex flex-col items-center space-y-2">
-                    <div className="text-3xl">📧</div>
+                    <div className="text-3xl"><i className="fa-solid fa-envelope"></i></div>
                     <span className="text-sm text-gray-500 uppercase tracking-wide">Correo</span>
-                    <p className="text-base font-medium select-all">contacto@tudominio.com</p>
+                    <p className="text-base font-medium select-all">asesoriaempresarial.info@gmail.com</p>
                     </div>
                 </div>
             </section>

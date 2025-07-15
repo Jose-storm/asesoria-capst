@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "@/pages/home/Home";
-import BlogDetail from "@/pages/BlogDetail";
+import BlogDetail from "@/pages/blog/BlogDetail";
 // import ContactForm from "@/components/ContactForm";
-import Login from "@/pages/Login";
+import Login from "@/pages/login/Login";
 import Dashboard from "@/pages/admin/Dashboard";
 import ArticulosCRUD from "@/pages/admin/ArticulosCRUD";
 import Contactos from "@/pages/admin/Contactos";
@@ -22,6 +22,7 @@ import AsesoriaTributaria from "@/pages/servicio/AsesoriaTributaria";
 import AsesoriaLaboral from "@/pages/servicio/AsesoriaLaboral";
 import ErrorPage from "@/pages/support/ErrorPage";
 import PoliticasPrivacity from "@/pages/support/PoliticasPrivacity";
+import Usuarios from "@/pages/admin/UsuariosCRUD";
 
 const AppRouter = () => {
     return (
@@ -58,6 +59,8 @@ const AppRouter = () => {
             <Route path="contactos" element={<Contactos />} />
             <Route path="cursos" element={<CursosCRUD />} />
             <Route path="docentes" element={<DocenteCRUD />} />
+            <Route path="usuarios" element={<Usuarios />} />
+
             </Route>
             <Route path="*" element={<ErrorPage />} />
         </Routes>

@@ -1,39 +1,5 @@
-// import { Navigate } from "react-router-dom";
-// import { useAuth } from "../hooks/useAuth";
-// import type { ReactNode } from "react";
-
-// interface PrivateRouteProps {
-//     children: ReactNode;
-// }
-// const PrivateRoute = ({ children }: PrivateRouteProps) => {
-//   const { token, isAdmin } = useAuth();
-
-//   if (!token || !isAdmin) return <Navigate to="/login" />;
-//   return <>{children}</>; // Fragmento para asegurar render
-// };
-
-// export default PrivateRoute;
-// import { Navigate } from "react-router-dom";
-// import { useAuth } from "../hooks/useAuth";
-// import type { ReactNode } from "react";
-
-// interface PrivateRouteProps {
-//   children: ReactNode;
-// }
-
-// const PrivateRoute = ({ children }: PrivateRouteProps) => {
-//   const { token, isAdmin, loading } = useAuth();
-
-//   if (loading) return <div>Cargando...</div>; // Evita render/redirección temprana
-//   if (!token || !isAdmin) return <Navigate to="/login" />;
-
-//   return <>{children}</>;
-// };
-
-// export default PrivateRoute;
-
 import { Navigate } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "@/hooks/useAuth";
 import type { ReactNode } from "react";
 
 interface PrivateRouteProps {
