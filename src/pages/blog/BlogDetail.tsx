@@ -115,7 +115,7 @@ const BlogDetail = () => {
               </ul>
             </div>
 
-            <div className="sticky top-17 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 rounded shadow-md text-center">
+            <div className="sticky top-17 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 rounded-4xl shadow-md text-center">
               <h3 className="text-2xl font-bold mb-2">¡Contáctanos para una asesoría gratuita!</h3>
               <p className="mb-4 text-base">Estamos listos para ayudarte a potenciar tu negocio. Agenda una consulta hoy mismo.</p>
               <img

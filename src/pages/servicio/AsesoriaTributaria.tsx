@@ -1,5 +1,7 @@
 import ImgT from "@/assets/img/asesoria_tributaria.jpg"
 import ImgCd from "@/assets/img/tributo_tax.png"
+import ImgTs from "@/assets/img/tributario_s.jpg"
+
 type Servicio = {
     id: number;
     titulo: string;
@@ -49,6 +51,18 @@ const serviciosTributarios: Servicio[] = [
         'Auditamos internamente tu documentación contable y tributaria para detectar riesgos y corregirlos antes de inspecciones oficiales.',
         icono: '🔍',
     },
+];
+
+/* Servicios incluidos en el análisis tributario */
+
+const features = [
+    "Declaraciones juradas mensuales y anuales (IGV, Renta, etc.)",
+    "Determinación y revisión de obligaciones tributarias",
+    "Análisis de incidencias fiscales en operaciones",
+    "Asesoría en fiscalización y auditorías de SUNAT",
+    "Planeamiento tributario preventivo",
+    "Atención de requerimientos y cartas inductivas",
+    "Actualización constante según cambios normativos"
 ];
 
 export default function AsesoriaTributaria(){
@@ -124,6 +138,38 @@ export default function AsesoriaTributaria(){
                         <p className="text-gray-700 leading-relaxed text-base">{item.descripcion}</p>
                     </div>
                     ))}
+                </div>
+            </section>
+            <section className="bg-white py-16 px-6">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                    {/* Imagen */}
+                    <div className="w-full h-auto flex justify-center items-center">
+                    <img
+                        src={ImgTs} // Asegúrate que ImgCS esté importada correctamente
+                        alt="Servicios de Asesoría Tributaria"
+                        className="w-full h-auto shadow-lg"
+                    />
+                    </div>
+
+                    {/* Lista de servicios */}
+                    <div className="text-gray-800 font-fam-ge">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 font-fam">
+                        Servicios incluidos en nuestra <span className="text-[#103778]">Asesoría Tributaria</span>
+                    </h2>
+                    <p className="text-base text-gray-700 font-fam mb-6">
+                        Ofrecemos acompañamiento especializado en el cumplimiento y optimización de tus obligaciones tributarias:
+                    </p>
+                    <ul className="space-y-3">
+                        {features.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2 font-fam-ge">
+                            <span className="text-[#103778] text-lg"><i className="fa-solid fa-circle-check"></i></span>
+                            <span className="text-gray-800 text-lg">{item}</span>
+                        </li>
+                        ))}
+                    </ul>
+                    </div>
+
                 </div>
             </section>
         </>

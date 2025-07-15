@@ -1,5 +1,6 @@
 import ImgL from "@/assets/img/laboral_one.jpg"
 import ImgCd from "@/assets/img/tributaria_one.png"
+import ImgLs from "@/assets/img/laboral_s.jpg"
 
 type Servicio = {
     id: number;
@@ -52,6 +53,16 @@ const serviciosLaborales: Servicio[] = [
     },
 ];
 
+/* Servicios incluidos en el análisis Laboral */
+
+const features = [
+    "Cálculo y elaboración de planillas de sueldos",
+    "Gestión de contratos (indefinidos, temporales, prácticos)",
+    "Determinación y liquidación de beneficios sociales (CTS, gratificaciones, utilidades)",
+    "Elaboración y presentación de declaraciones PLAME y T-Registro",
+    "Asesoría en procedimientos disciplinarios y terminaciones de contrato",
+    "Representación y acompañamiento ante SUNAFIL y otras entidades"
+];
 export default function AsesoriaLaboral(){
 
     return(
@@ -126,6 +137,38 @@ export default function AsesoriaLaboral(){
                         <p className="text-gray-700 leading-relaxed text-base">{item.descripcion}</p>
                     </div>
                     ))}
+                </div>
+            </section>
+
+            <section className="bg-white py-16 px-6">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                    {/* Imagen */}
+                    <div className="w-full h-auto flex justify-center items-center">
+                    <img
+                        src={ImgLs}  // Cambia por una imagen que represente asesoría laboral
+                        alt="Servicios de Asesoría Laboral"
+                        className="w-full h-auto shadow-lg"
+                    />
+                    </div>
+
+                    {/* Lista de servicios */}
+                    <div className="text-gray-800 font-fam-ge">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 font-fam">
+                        Servicios incluidos en nuestra <span className="text-[#103778]">Asesoría Laboral</span>
+                    </h2>
+                    <p className="text-base text-gray-700 font-fam mb-6">
+                        Te apoyamos en el cumplimiento de la normativa laboral peruana y la gestión eficiente de tu equipo:
+                    </p>
+                    <ul className="space-y-3">
+                        {features.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2 font-fam-ge">
+                            <span className="text-[#103778] text-lg"><i className="fa-solid fa-circle-check"></i></span>
+                            <span className="text-gray-800 text-lg">{item}</span>
+                        </li>
+                        ))}
+                    </ul>
+                    </div>
                 </div>
             </section>
         </>

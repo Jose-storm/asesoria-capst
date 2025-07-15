@@ -6,10 +6,10 @@ import ImgCS from "@/assets/img/AC_servicio.jpg"
 // data/serviciosContables.ts
 // types.ts o dentro del componente
 type Servicio = {
-  id: number;
-  titulo: string;
-  descripcion: string;
-  icono: React.ReactNode;
+    id: number;
+    titulo: string;
+    descripcion: string;
+    icono: React.ReactNode;
 };
 
 const serviciosContable: Servicio[] = [
@@ -57,8 +57,7 @@ const serviciosContable: Servicio[] = [
     },
 ];
 
-
-
+/* Servicios incluidos en el análisis contable */
 const features = [
     "Registro y clasificación de operaciones contables",
     "Elaboración y presentación de libros contables electrónico",

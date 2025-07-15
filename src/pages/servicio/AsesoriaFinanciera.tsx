@@ -1,5 +1,7 @@
 import ImgF from "@/assets/img/finanza.jpg"
 import ImgCd from "@/assets/img/finanza_two.png"
+import ImgFC from "@/assets/img/finanzas_stwo.jpg"
+
 type Servicio = {
     id: number;
     titulo: string;
@@ -51,7 +53,16 @@ const serviciosFinancieros: Servicio[] = [
         icono: '📊',
     },
 ];
-
+/* Servicios incluidos en el análisis financiero */
+const features = [
+    "Análisis y diagnóstico de la situación financiera actual",
+    "Elaboración de presupuestos y control de gastos",
+    "Gestión y proyección de flujo de caja",
+    "Evaluación de rentabilidad y toma de decisiones",
+    "Asesoría para inversiones y financiamiento",
+    "Planificación financiera personal y empresarial",
+    "Optimización de costos y estructura financiera"
+];
 export default function AsesoriaFinanciera(){
 
     return(
@@ -126,6 +137,39 @@ export default function AsesoriaFinanciera(){
                         <p className="text-gray-700 leading-relaxed text-base">{item.descripcion}</p>
                     </div>
                     ))}
+                </div>
+            </section>
+
+            <section className="bg-white py-16 px-6">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                    {/* Imagen */}
+                    <div className="w-full h-auto flex justify-center items-center">
+                    <img
+                        src={ImgFC} // Asegúrate que ImgCS esté importada correctamente
+                        alt="Servicios de Asesoría Financiera"
+                        className="w-full h-auto shadow-lg"
+                    />
+                    </div>
+
+                    {/* Lista de servicios */}
+                    <div className="text-gray-800 font-fam-ge">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 font-fam">
+                        Servicios incluidos en nuestra <span className="text-[#103778]">Asesoría Financiera</span>
+                    </h2>
+                    <p className="text-base text-gray-700 font-fam mb-6">
+                        Ponemos a tu disposición una variedad de servicios orientados a fortalecer la salud financiera de tu empresa o proyecto:
+                    </p>
+                    <ul className="space-y-3">
+                        {features.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2 font-fam-ge">
+                            <span className="text-[#103778] text-lg"><i className="fa-solid fa-circle-check"></i></span>
+                            <span className="text-gray-800 text-lg">{item}</span>
+                        </li>
+                        ))}
+                    </ul>
+                    </div>
+
                 </div>
             </section>
         </>
