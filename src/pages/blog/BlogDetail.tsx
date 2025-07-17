@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "@/api/axios";
+import ImgBG from "@/assets/img/Callcenter.png"
 import type { Article } from "@/types";
 
 const BlogDetail = () => {
@@ -119,7 +120,7 @@ const BlogDetail = () => {
               <h3 className="text-2xl font-bold mb-2">¡Contáctanos para una asesoría gratuita!</h3>
               <p className="mb-4 text-base">Estamos listos para ayudarte a potenciar tu negocio. Agenda una consulta hoy mismo.</p>
               <img
-                src="/src/assets/img/llamativo_ae.png"
+                src={ImgBG}
                 alt="Asesoría"
                 className="mx-auto mb-4 h-40 w-70"
               />

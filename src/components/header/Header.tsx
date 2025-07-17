@@ -115,16 +115,20 @@ const closeMenu = () => {
             </li>
 
             {/* Botones móviles (login + registro) */}
-            <li className="md:hidden">
-              <Link to="/login" onClick={closeMenu} className="block w-full px-4 py-2 text-white font-bold text-center bg-[#103778] rounded-full hover:bg-[#791137] hover:text-white transition">
+            <li className="md:hidden w-full px-4 py-2">
+              <Link
+                to="/login"
+                onClick={closeMenu}
+                className="block w-full py-3 text-white font-semibold text-center bg-[#103778] rounded-full hover:bg-[#791137] transition duration-300"
+              >
                 Iniciar Sesión
               </Link>
             </li>
-            <li className="md:hidden">
+            {/* <li className="md:hidden">
               <Link to="/registro" onClick={closeMenu} className="block w-full px-4 py-2 text-[#103778] font-bold text-center bg-white rounded-full hover:bg-[#103778] hover:text-white transition">
                 Registrarse
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
