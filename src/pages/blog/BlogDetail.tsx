@@ -96,22 +96,22 @@ const BlogDetail = () => {
               <h2 className="bold mb-2 text-base">Visítanos en nuestras redes sociales</h2>
               <ul>
                 <li className="inline-block mr-2">
-                  <a className="hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full"><i className="fa-brands fa-square-instagram"></i></a>
+                  <a href="https://www.instagram.com/asesoriaempresarial.info?igsh=eW5qMXpxMTcyYXpu" className="hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full" target="_blank"><i className="fa-brands fa-square-instagram"></i></a>
                 </li>
                 <li className="inline-block mr-2">
-                  <a href="https://www.tiktok.com/@asesoriaempresarial?is_from_webapp=1&sender_device=pc" className="hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full"><i className="fa-brands fa-tiktok"></i></a>
+                  <a href="https://www.tiktok.com/@asesoriaempresarial?is_from_webapp=1&sender_device=pc" className="hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full" target="_blank"><i className="fa-brands fa-tiktok"></i></a>
                 </li>
                 <li className="inline-block mr-2">
-                  <a className="hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full"><i className="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fx.com%2FAsesoraEmpresa1%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExMUJtazZSY1dmdjhxQkoyMAEeyYMNl3ZS1eKNQrWLXtGASVMCgf5AcWn0_09HkYFKu2MG59GTWZTmoUzUnZk_aem_nrCVtk43KaKXsCCESac1sw&h=AT1Tqvr3whv5HRRHoPbd4MqhPgAvW0cJ3Vsy52r5QrO-V3Nek9bDTZg1TkcTbzomvhFZNkG97a6wby-vbB29r0tKAd4momG-nouiCBj82wZyDZ94k3wzxd8KEqM4-AyaQ1r7" className="hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full" target="_blank"><i className="fa-brands fa-x-twitter"></i></a>
                 </li>
                 <li className="inline-block mr-2">
-                  <a href="https://www.facebook.com/ConsultorioEmpresarialPeru" className="hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-5 py-3 inline-block rounded-full"><i className="fa-brands fa-facebook-f"></i></a>
+                  <a href="https://www.facebook.com/ConsultorioEmpresarialPeru" className="hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-5 py-3 inline-block rounded-full" target="_blank"><i className="fa-brands fa-facebook-f"></i></a>
                 </li>
                 <li className="inline-block mr-2 mt-2">
-                  <a href="https://youtube.com/@asesoriaempresarialperu?si=frIb5vys2VU6EQp9" className="hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full"><i className="fa-brands fa-youtube"></i></a>
+                  <a href="https://youtube.com/@asesoriaempresarialperu?si=frIb5vys2VU6EQp9" className="hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full" target="_blank"><i className="fa-brands fa-youtube"></i></a>
                 </li>
                 <li className="inline-block mr-2 mt-2">
-                        <a href="https://www.linkedin.com/company/asesor%C3%ADa-empresarial-per%C3%BA/" className="text-base hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full"><i className="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/company/asesor%C3%ADa-empresarial-per%C3%BA/" className="text-base hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
                 </li>
               </ul>
             </div>

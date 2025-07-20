@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { CalendarDays, Clock, GraduationCap, LayoutGrid, UsersRound } from "lucide-react";
 import type { Taller } from "@/types";
 
+/* Mensaje de whatsap de curso */
+
 const CursoDetail = () => {
     const { id } = useParams();
     const [curso, setCurso] = useState<Taller | null>(null);
@@ -33,6 +35,9 @@ const CursoDetail = () => {
         {children}
         </span>
     );
+
+    const mensaje_w = encodeURIComponent(`Hola, me gustaría obtener más información sobre el curso: "${curso.nombre}"`)
+    const numero_contacto = "51993568867";
 
     return (
         <section className="font-fam-ge">
@@ -116,15 +121,36 @@ const CursoDetail = () => {
             </article>
 
             {/* CTA */}
-            <div className="text-center pt-6">
-                <button
-                    disabled={!curso.estado}
-                    className={`rounded-full px-8 py-3 text-white font-bold transition
-                    ${curso.estado ? "bg-emerald-600 hover:bg-emerald-700 active:scale-95" : "bg-gray-400 cursor-not-allowed"}`}
+            <div className="text-center pt-6 space-y-4">
+            {curso.estado ? (
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+                {/* Enlace a WhatsApp */}
+                <a
+                    href={`https://wa.me/${numero_contacto}?text=${mensaje_w}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition"
                 >
-                    {curso.estado ? "Unirme al grupo" : "Próximamente"} <i className="ml-2 text-xl fa-brands fa-whatsapp"></i>
-                </button>
+                    <i className="fa-brands fa-whatsapp text-lg" />
+                    Más información sobre este curso
+                </a>
+
+                {/* Enlace a YouTube */}
+                <a
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" // ← reemplaza este link por el correcto
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition"
+                >
+                    <i className="fa-brands fa-youtube text-lg" />
+                        Ver video en YouTube
+                </a>
+                </div>
+            ) : (
+                <p className="text-gray-500 italic">Este curso estará disponible próximamente.</p>
+            )}
             </div>
+
         </motion.div>
         </section>
     );

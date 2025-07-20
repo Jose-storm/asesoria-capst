@@ -1,6 +1,9 @@
 import ContactForm from "@/components/contacto/ContactForm";
 import ImgCo from "@/assets/img/contact.jpg"
 
+const mensaje_w = encodeURIComponent("Hola, Deseo adquirir información");
+const numero_contacto = "51993568867";
+
 const Contacto = () => {
     return(
         <>
@@ -42,11 +45,11 @@ const Contacto = () => {
                             <li className="flex items-start gap-3">
                                 <div>
                                 <a
-                                    href="tel:+51955288116"
+                                    href={`https://wa.me/${numero_contacto}?text=${mensaje_w}`}
                                     className="block hover:text-blue-500 transition-colors mb-2"
                                 >
                                     <i className="fa-solid fa-phone text-blue-400 text-lg mr-2"></i>
-                                    +51 955 288 116
+                                    +51 993 568 867
                                 </a>
                                 <p className="text-gray-600 text-base">
                                     Lunes a Viernes 8:00am - 20:00pm<br />
@@ -59,7 +62,7 @@ const Contacto = () => {
                             <li className="flex items-start gap-3">
                                 <div>
                                 <a
-                                    href="mailto:albergue.adoptasalvavidas@gmail.com"
+                                    href="mailto:asesoriaempresarial.info@gmail.com"
                                     className="block hover:text-blue-500 transition-colors break-all"
                                 >
                                     <i className="fa-solid fa-envelope text-blue-400 text-lg mr-2"></i>
