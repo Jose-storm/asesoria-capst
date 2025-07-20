@@ -132,18 +132,18 @@ const CursoDetail = () => {
                     className="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition"
                 >
                     <i className="fa-brands fa-whatsapp text-lg" />
-                    Más información sobre este curso
+                    Unirme al grupo
                 </a>
 
                 {/* Enlace a YouTube */}
                 <a
-                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" // ← reemplaza este link por el correcto
+                    href="https://youtube.com/@asesoriaempresarialperu?si=frIb5vys2VU6EQp9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition"
                 >
                     <i className="fa-brands fa-youtube text-lg" />
-                        Ver video en YouTube
+                        Ver en YouTube
                 </a>
                 </div>
             ) : (

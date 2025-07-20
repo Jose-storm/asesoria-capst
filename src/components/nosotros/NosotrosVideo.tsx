@@ -20,7 +20,7 @@ export default function NosotrosVideo(){
                             href="https://www.youtube.com/@asesoriaempresarialperu"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block bg-[#791137] text-white text-lg font-semibold py-3 px-6 rounded-full shadow-md transition duration-300"
+                            className="inline-block bg-red-600 hover:bg-red-700 text-white text-lg font-semibold py-3 px-6 rounded-full shadow-md transition duration-300"
                         >
                             Ir al Canal de YouTube <i className="ml-2 fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
