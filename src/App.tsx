@@ -11,7 +11,7 @@ import AppRouter from "./routes/AppRouter";
 import "./App.css";
 import Mantenimiento from "@/pages/support/Mantenimiento"; // Asegúrate de tener esta página
 
-const EN_MANTENIMIENTO = import.meta.env.VITE_MANTENIMIENTO === "false";
+const EN_MANTENIMIENTO = import.meta.env.VITE_MANTENIMIENTO === "true";
 
 const App = () => {
     if (EN_MANTENIMIENTO) {
