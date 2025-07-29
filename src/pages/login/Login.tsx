@@ -21,15 +21,21 @@ const Login = () => {
   setError("");
   try {
     const res = await API.post("/auth/login", form);
+    // const rol = res.data.role;
+    // login(res.data.token, rol);
+    
     const rol = res.data.role;
-    login(res.data.token, rol);
-
-    // Redirección inmediata después del login
-    if (rol === "admin") {
+    login(res.data.token, rol.toString()); // guarda el rol en context
+    /* Modificación 29/07/2025-------------------------------------------------------------- */
+    
+    if (rol === "admin" || rol === "admin_secundario") {
       navigate("/admin");
     } else {
-      navigate("/"); 
+      navigate("/");
     }
+
+    // console.log("Respuesta del backend:", res.data);
+    /* Modificación 29/07/2025-------------------------------------------------------------- */
 
   } catch (err) {
     console.error("Error al hacer login:", err);
@@ -101,6 +107,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
