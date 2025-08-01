@@ -13,7 +13,7 @@ export default function FormularioNuevoUsuario({ onSuccess }: { onSuccess: () =>
     nombre: "",
     email: "",
     password: "",
-    rol_id: "2", // por defecto: cliente
+    rol_id: "2",
   });
 
   const [loading, setLoading] = useState(false);

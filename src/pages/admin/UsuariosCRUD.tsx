@@ -19,7 +19,7 @@ export default function Usuarios() {
   /* ───────── ESTADOS ───────── */
     const [usuarios, setUsuarios] = useState<Usuario[]>([]);
     const [filtroTexto, setFiltroTexto] = useState("");
-    const [filtroRol,   setFiltroRol]   = useState<string>(""); // "" = todos
+    const [filtroRol,   setFiltroRol]   = useState<string>(""); 
     const [paginaActual, setPaginaActual] = useState(1);
     const [mostrarModal, setMostrarModal] = useState(false);
 

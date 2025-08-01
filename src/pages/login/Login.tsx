@@ -25,7 +25,7 @@ const Login = () => {
     // login(res.data.token, rol);
     
     const rol = res.data.role;
-    login(res.data.token, rol.toString()); // guarda el rol en context
+    login(res.data.token, rol.toString());
     /* Modificación 29/07/2025-------------------------------------------------------------- */
     
     if (rol === "admin" || rol === "admin_secundario") {
@@ -69,7 +69,6 @@ const Login = () => {
             Ingresa tus credenciales para acceder al panel de gestión del sistema.
           </p>
 
-          {/* Puedes agregar contenido dinámico como hora actual */}
           <div className="text-center text-sm text-blue-500 mb-4">
             {new Date().toLocaleString("es-PE", { dateStyle: "medium", timeStyle: "short" })}
           </div>

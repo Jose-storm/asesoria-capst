@@ -111,7 +111,10 @@ const BlogDetail = () => {
                   <a href="https://youtube.com/@asesoriaempresarialperu?si=frIb5vys2VU6EQp9" className="hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full" target="_blank"><i className="fa-brands fa-youtube"></i></a>
                 </li>
                 <li className="inline-block mr-2 mt-2">
-                        <a href="https://www.linkedin.com/company/asesor%C3%ADa-empresarial-per%C3%BA/" className="text-base hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/company/asesor%C3%ADa-empresarial-per%C3%BA/" className="text-base hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li className="inline-block mr-2 mt-2">
+                  <a href="https://open.spotify.com/show/4bkgkDJAXILQZ9PVFKy3xr?si=6348889ba4514e86" className="text-base hover:text-[#103778] border-blue-400 hover:bg-blue-400 transition delay-50 duration-300 border-1 px-4 py-3 inline-block rounded-full" target="_blank"><i className="fa-brands fa-spotify"></i></a>
                 </li>
               </ul>
             </div>
