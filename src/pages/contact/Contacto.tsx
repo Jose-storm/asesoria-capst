@@ -36,8 +36,7 @@ const Contacto = () => {
                             Contáctanos <br />fácilmente
                         </h2>
                         <p className="text-base mb-6 font-fam">
-                            Ya sea que estés interesado en adoptar, ser voluntario, donar o simplemente conocer más
-                            sobre nuestro trabajo, no dudes en escribirnos.
+                            Ya sea que estés interesado en los diferentes servicios de asesoría o talleres no dudes en escribirnos.
                         </p>
 
                         <ul className="space-y-4 text-gray-800 text-md font-fam">
@@ -73,7 +72,7 @@ const Contacto = () => {
                         </ul>
                         <p className="mt-6 text-gray-600 text-lg font-fam">
                             Nuestro equipo está listo para brindarte toda la información que necesites. 
-                            ¡Gracias por apoyar una causa que da esperanza!
+                            Te acompañamos en el crecimiento de tu empresa.
                         </p>
                     </div>
 
