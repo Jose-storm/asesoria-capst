@@ -7,12 +7,11 @@ const API_URL = "/docentes";
 const FILAS_POR_PAGINA = 4;
 
 export default function DocenteCRUD() {
-  /* ─────────  ESTADOS PRINCIPALES  ───────── */
     const [docentes, setDocentes] = useState<Docente[]>([]);
     const [editandoId, setEditandoId] = useState<number | null>(null);
     const [nuevoDocente, setNuevoDocente] = useState({ nombre: "", carrera: "" });
 
-    /* ─────────  PAGINACIÓN  ───────── */
+    // Funcion Paginación
     const [paginaActual, setPaginaActual] = useState(1);
     const totalPaginas = Math.ceil(docentes.length / FILAS_POR_PAGINA);
 
@@ -25,7 +24,6 @@ export default function DocenteCRUD() {
         if (paginaActual > totalPaginas) setPaginaActual(1);
     }, [totalPaginas]);
 
-    /* ─────────  PETICIONES  ───────── */
     const fetchDocentes = async () => {
         try {
         const res = await axios.get(API_URL);
@@ -39,7 +37,6 @@ export default function DocenteCRUD() {
         fetchDocentes();
     }, []);
 
-    /* ─────────  HANDLERS  ───────── */
     const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNuevoDocente({ ...nuevoDocente, [e.target.name]: e.target.value });
     };
@@ -88,18 +85,16 @@ export default function DocenteCRUD() {
         }
     };
 
-    /* ─────────  UTIL  ───────── */
     const resetForm = () => {
         setNuevoDocente({ nombre: "", carrera: "" });
         setEditandoId(null);
     };
 
-    /* ─────────  RENDER  ───────── */
     return (
         <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg shadow-md font-fam-ge">
         <h2 className="text-3xl font-bold mb-6 text-center">Gestión de Docentes o Tutores</h2>
 
-        {/* ─── FORMULARIO CREAR / EDITAR ─── */}
+        {/* FORMULARIO CREAR / EDITAR */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 items-start">
             <div className="space-y-4 font-semibold text-gray-700 hidden md:block">
             <p>Nombre:</p>
@@ -148,7 +143,7 @@ export default function DocenteCRUD() {
             </button>
         )}
 
-        {/* ─── TABLA ─── */}
+        {/* TABLA */}
         <div className="overflow-x-auto">
             <table className="min-w-full text-sm text-left">
             <thead className="bg-gray-100 text-gray-700 uppercase">
@@ -196,7 +191,6 @@ export default function DocenteCRUD() {
             </table>
         </div>
 
-        {/* ─── PESTAÑAS DE PÁGINA ─── */}
         {totalPaginas > 1 && (
             <nav className="flex flex-wrap justify-center gap-2 mt-6">
             {Array.from({ length: totalPaginas }, (_, i) => i + 1).map((num) => (

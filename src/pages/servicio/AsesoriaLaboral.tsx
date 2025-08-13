@@ -74,10 +74,8 @@ export default function AsesoriaLaboral(){
                     alt="Publicidad"
                     className="absolute inset-0 w-full h-full object-cover object-center"
                     />
-                    {/* Overlay oscuro para contraste */}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent z-10" />
 
-                    {/* Contenido centrado */}
                     <div className="relative z-10 flex items-center justify-center h-full">
                         <div className="text-center px-4 sm:px-8 max-w-3xl text-white">
                             {/* <p className="text-base">Cursos y talleres</p> */}
@@ -105,13 +103,12 @@ export default function AsesoriaLaboral(){
                     </p>
                     </div>
 
-                    {/* Imagen */}
                     <div className="w-full h-auto flex justify-center items-center">
-                    <img
-                        src={ImgCd}
-                        alt="Asesoría Laboral"
-                        className="w-full h-auto"
-                    />
+                        <img
+                            src={ImgCd}
+                            alt="Asesoría Laboral"
+                            className="w-full h-auto"
+                        />
                     </div>
                 </div>
             </section>
@@ -119,10 +116,10 @@ export default function AsesoriaLaboral(){
             <section className="bg-gray-50 py-20 px-6">
                 <div className="max-w-6xl mx-auto text-center mb-16">
                     <h2 className="text-4xl font-bold text-gray-800 mb-6 font-fam">
-                    ¿Cómo te ayudamos con nuestra <span className="text-[#103778]">Asesoría Laboral?</span>
+                        ¿Cómo te ayudamos con nuestra <span className="text-[#103778]">Asesoría Laboral?</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto font-fam">
-                    Acompañamos a tu empresa en la toma de decisiones estratégicas basadas en datos financieros sólidos, proyecciones realistas y control efectivo del rendimiento económico.
+                        Acompañamos a tu empresa en la toma de decisiones estratégicas basadas en datos financieros sólidos, proyecciones realistas y control efectivo del rendimiento económico.
                     </p>
                 </div>
 
@@ -142,11 +139,9 @@ export default function AsesoriaLaboral(){
 
             <section className="bg-white py-16 px-6">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-                    {/* Imagen */}
                     <div className="w-full h-auto flex justify-center items-center">
                     <img
-                        src={ImgLs}  // Cambia por una imagen que represente asesoría laboral
+                        src={ImgLs}
                         alt="Servicios de Asesoría Laboral"
                         className="w-full h-auto shadow-lg"
                     />

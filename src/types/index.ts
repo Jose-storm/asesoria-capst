@@ -21,12 +21,12 @@ export interface Taller {
   id: number;
   nombre: string;
   modalidad: 'Presencial' | 'Virtual';
-  docente_id: number;          // clave foránea
-  docente_nombre?: string;     // si viene con JOIN
-  carrera?: string;            // si viene con JOIN
-  fecha_inicio: string;        // formato YYYY-MM-DD
-  hora_inicio: string;         // formato HH:mm
-  hora_fin: string;            // formato HH:mm
+  docente_id: number;          
+  docente_nombre?: string;     
+  carrera?: string;            
+  fecha_inicio: string;        
+  hora_inicio: string;         
+  hora_fin: string;            
   indice: string;
   extracto: string;
   contenido: string;

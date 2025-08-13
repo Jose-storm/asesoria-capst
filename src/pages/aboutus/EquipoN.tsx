@@ -4,7 +4,7 @@ import ImgNtwo from "@/assets/img/profesional_two.jpg"
 import ImgNtree from "@/assets/img/profesional_tree.jpg"
 import ImgNfour from "@/assets/img/profesional_six.jpg"
 import ImgNfive from "@/assets/img/profesional_five.jpg"
-/* Interface-objeto */
+
 type Equipo ={
     id: number,
     nombreCompleto: string,

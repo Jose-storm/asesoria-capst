@@ -50,7 +50,6 @@ const NosotrosGrid: React.FC = () => {
 return (
     <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
             <div className="h-96 md:h-full">
                 <img
                     src={ImgNosotros}
@@ -69,27 +68,24 @@ return (
                 <p className="text-gray-600 mb-4">
                     Con años de experiencia y un equipo apasionado, nos destacamos por ofrecer:
                 </p>
-                {/* Ruta de Props Padre */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4">
                 {referencia_us.map(({ id, titulo, descripcion, imagen }) => (
                     <div
                     key={id}
                     className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-200 flex items-start gap-4"
                     >
-                    {/* Imagen en vez de icono */}
-                    <div className="flex-shrink-0">
-                        <img
-                        src={imagen}
-                        alt={titulo}
-                        className="w-14 h-20 object-contain"
-                        />
-                    </div>
+                        <div className="flex-shrink-0">
+                            <img
+                            src={imagen}
+                            alt={titulo}
+                            className="w-14 h-20 object-contain"
+                            />
+                        </div>
 
-                    {/* Texto */}
-                    <div>
-                        <h3 className="text-xl font-semibold mb-1 font-fam-ge">{titulo}</h3>
-                        <p className="text-gray-600">{descripcion}</p>
-                    </div>
+                        <div>
+                            <h3 className="text-xl font-semibold mb-1 font-fam-ge">{titulo}</h3>
+                            <p className="text-gray-600">{descripcion}</p>
+                        </div>
                     </div>
                 ))}
                 </div>
@@ -99,7 +95,7 @@ return (
                     to="/nosotros"
                     className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition"
                     >
-                    Conoce más sobre nosotros<span className="ml-2">→</span>
+                        Conoce más sobre nosotros<span className="ml-2">→</span>
                     </Link>
                 </div>
             </div>

@@ -8,7 +8,6 @@ import type { Contacto } from "@/types";
 const FILAS_POR_PAGINA = 5;
 
 export default function Contactos() {
-  /* ───────── ESTADOS ───────── */
   const [mensajes, setMensajes] = useState<Contacto[]>([]);
   const [filtroTexto, setFiltroTexto] = useState("");
   const [filtroFecha, setFiltroFecha] = useState("");
@@ -16,7 +15,6 @@ export default function Contactos() {
   const [mensajeSeleccionado, setMensajeSeleccionado] = useState<Contacto | null>(null);
   const { token } = useAuth();
 
-  /* ───────── PETICIÓN ───────── */
   const fetchMensajes = async () => {
     try {
       const res = await axios.get("/contacto", {
@@ -30,7 +28,6 @@ export default function Contactos() {
 
   useEffect(() => { fetchMensajes(); }, [token]);
 
-  /* ───────── FILTROS ───────── */
   const mensajesFiltrados = useMemo(() => {
     const term = filtroTexto.toLowerCase();
     return mensajes.filter(({ nombre, email, telefono, enviado_en }) => {
@@ -47,7 +44,6 @@ export default function Contactos() {
     });
   }, [mensajes, filtroTexto, filtroFecha]);
 
-  /* ───────── PAGINACIÓN ───────── */
   const totalPaginas = Math.ceil(mensajesFiltrados.length / FILAS_POR_PAGINA);
 
   const mensajesPaginados = useMemo(() => {
@@ -59,7 +55,6 @@ export default function Contactos() {
     if (paginaActual > totalPaginas) setPaginaActual(1);
   }, [totalPaginas]);
 
-  /* ───────── ELIMINAR ───────── */
   const eliminarMensaje = async (id: number) => {
     const { isConfirmed } = await Swal.fire({
       title: "¿Eliminar mensaje?",
@@ -85,12 +80,10 @@ export default function Contactos() {
     }
   };
 
-  /* ───────── RENDER ───────── */
   return (
     <div className="p-8 max-w-5xl mx-auto bg-white rounded-xl shadow-lg font-fam-ge">
       <h2 className="text-3xl font-bold mb-6 text-center">Mensajes de Contacto</h2>
 
-      {/* ─── FILTROS ─── */}
       <div className="flex flex-col md:flex-row gap-4 mb-6">
         <input
           type="text"
@@ -107,7 +100,7 @@ export default function Contactos() {
         />
       </div>
 
-      {/* ─── TABLA ─── */}
+      {/* TABLA  */}
       <div className="overflow-x-auto">
         <table className="min-w-full border border-gray-200 bg-white shadow-md">
           <thead className="bg-gray-100 text-left text-gray-700 uppercase text-sm">
@@ -160,7 +153,6 @@ export default function Contactos() {
         </table>
       </div>
 
-      {/* ─── PAGINACIÓN ─── */}
       {totalPaginas > 1 && (
         <nav className="flex flex-wrap justify-center gap-2 mt-6">
           {Array.from({ length: totalPaginas }, (_, i) => i + 1).map((num) => (
@@ -179,7 +171,6 @@ export default function Contactos() {
         </nav>
       )}
 
-      {/* ─── MODAL DETALLE ─── */}
       {mensajeSeleccionado && (
         <ContactoModal
           mensaje={mensajeSeleccionado}

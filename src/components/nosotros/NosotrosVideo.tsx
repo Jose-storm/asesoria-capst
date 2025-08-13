@@ -3,12 +3,10 @@ export default function NosotrosVideo(){
         <>
             <section className="bg-gray-50 py-16 px-6">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
-                    {/* Video de YouTube */}
                     <div className="w-full overflow-hidden">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/Zzu9fjQHtk8?si=FTr2CI3vs45G1Xr4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                     </div>
 
-                    {/* Descripción y botón */}
                     <div className="space-y-6 text-gray-800 font-fam-ge">
                         <h2 className="text-4xl font-bold text-[#0b2142] font-fam capitalize">
                             <span className="text-[#103778]">Talleres</span> en YouTube

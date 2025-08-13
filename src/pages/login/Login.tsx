@@ -46,7 +46,7 @@ const Login = () => {
     <section className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="flex flex-col md:flex-row bg-white shadow-2xl overflow-hidden max-w-4xl w-full font-fam-ge">
         
-        {/* Imagen lateral */}
+        {/* Imagen */}
         <div className="hidden md:block md:w-1/2">
           <img
             src={ImgInit}
@@ -55,7 +55,6 @@ const Login = () => {
           />
         </div>
 
-        {/* Formulario con detalles */}
         <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
           <div className="flex justify-center mb-2">
             <img

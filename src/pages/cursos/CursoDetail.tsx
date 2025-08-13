@@ -1,12 +1,9 @@
-// src/pages/CursoDetail.tsx
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "@/api/axios";
 import { motion } from "framer-motion";
 import { CalendarDays, Clock, GraduationCap, LayoutGrid, UsersRound } from "lucide-react";
 import type { Taller } from "@/types";
-
-/* Mensaje de whatsap de curso */
 
 const CursoDetail = () => {
     const { id } = useParams();
@@ -27,7 +24,6 @@ const CursoDetail = () => {
         </p>
         );
 
-    /* ─── Badges util ─── */
     const Badge = ({ children, color }: { children: string; color: string }) => (
         <span
         className={`inline-block rounded-full px-3 py-1 text-xs font-semibold text-white ${color}`}
@@ -41,7 +37,6 @@ const CursoDetail = () => {
 
     return (
         <section className="font-fam-ge">
-        {/* ─── HERO ─── */}
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -54,32 +49,30 @@ const CursoDetail = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
             <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 text-white space-y-2">
-            <h1 className="text-3xl md:text-5xl font-extrabold drop-shadow-lg">
-                {curso.nombre}
-            </h1>
-            <div className="flex flex-wrap gap-2">
-                <Badge color="bg-emerald-600">
-                {curso.estado ? "Disponible" : "No disponible"}
-                </Badge>
-                <Badge color="bg-indigo-600">{curso.modalidad}</Badge>
-                <Badge color="bg-rose-600">{curso.tipo_servicio}</Badge>
-            </div>
+                <h1 className="text-3xl md:text-5xl font-extrabold drop-shadow-lg">
+                    {curso.nombre}
+                </h1>
+                <div className="flex flex-wrap gap-2">
+                    <Badge color="bg-emerald-600">
+                    {curso.estado ? "Disponible" : "No disponible"}
+                    </Badge>
+                    <Badge color="bg-indigo-600">{curso.modalidad}</Badge>
+                    <Badge color="bg-rose-600">{curso.tipo_servicio}</Badge>
+                </div>
             </div>
         </motion.div>
 
-        {/* ─── CONTENIDO ─── */}
         <motion.div
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.15 }}
             className="max-w-5xl mx-auto px-6 md:px-0 py-10 space-y-10"
         >
-            {/* Back link */}
             <Link
             to="/cursos"
             className="inline-flex items-center gap-2 text-blue-600 hover:underline"
             >
-            ← Volver a cursos
+                ← Volver a cursos
             </Link>
 
             {/* Extracto / resumen */}
@@ -87,7 +80,7 @@ const CursoDetail = () => {
             <p className="text-gray-700 italic">{curso.extracto}</p>
             </div>
 
-            {/* Datos rápidos */}
+            {/* Datos */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-800 text-sm">
             <p className="flex items-center gap-2">
                 <CalendarDays size={18} />
@@ -114,17 +107,16 @@ const CursoDetail = () => {
             </p>
             </div>
 
-            {/* Contenido largo */}
+            {/* Contenido */}
             <article className="prose max-w-none prose-sky">
-            <h2>Contenido del curso</h2>
-            <p>{curso.contenido}</p>
+                <h2>Contenido del curso</h2>
+                <p>{curso.contenido}</p>
             </article>
 
             {/* CTA */}
             <div className="text-center pt-6 space-y-4">
             {curso.estado ? (
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                {/* Enlace a WhatsApp */}
                 <a
                     href={`https://wa.me/${numero_contacto}?text=${mensaje_w}`}
                     target="_blank"

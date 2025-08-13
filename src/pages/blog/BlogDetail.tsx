@@ -40,11 +40,8 @@ const BlogDetail = () => {
         </div>
       </section> */}
 
-      {/* Contenido principal y aside */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5 font-fam-ge">
-          {/* Contenido del artículo */}
-          {/* shadow-md */}
           <article className="col-span-2 bg-white p-6 rounded">
             <img
               src={article.imagen}
@@ -62,9 +59,7 @@ const BlogDetail = () => {
             </div>
           </article>
 
-          {/* Aside: otros artículos + redes + sección CTA */}
           <aside className="space-y-10">
-            {/* Otros artículos */}
             <div className="bg-white p-4 rounded shadow-md">
               <h2 className="text-xl font-bold text-gray-800 mb-4">Otros artículos</h2>
               <ul className="space-y-4">

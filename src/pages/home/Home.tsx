@@ -15,7 +15,6 @@ const Home = () => {
                   py-20 px-4 sm:px-6 lg:px-8
                   bg-[url('/img/house_init.jpg')]"
       >
-        {/* Sombreado desde la izquierda */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
 
         {/* Contenido */}

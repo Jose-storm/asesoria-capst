@@ -10,7 +10,6 @@ import Swal from "sweetalert2";
 const API_URL = "/articulos";
 
 const ArticulosCRUD = () => {
-  /* ─────────────────────────  ESTADOS BÁSICOS  ───────────────────────── */
   const [articulos, setArticulos] = useState<Article[]>([]);
   const [editandoId, setEditandoId] = useState<number | null>(null);
   const [nuevoArticulo, setNuevoArticulo] = useState({
@@ -21,7 +20,6 @@ const ArticulosCRUD = () => {
     autor_nombre: "",
   });
 
-  /* ─────────────────────────  PAGINACIÓN  ───────────────────────── */
   const FILAS_POR_PAGINA = 4;
   const [paginaActual, setPaginaActual] = useState(1);
 
@@ -32,12 +30,10 @@ const ArticulosCRUD = () => {
     return articulos.slice(inicio, inicio + FILAS_POR_PAGINA);
   }, [articulos, paginaActual]);
 
-  /* Si cambia la cantidad total y la página ya no existe, vuelve a 1 */
   useEffect(() => {
     if (paginaActual > totalPaginas) setPaginaActual(1);
   }, [totalPaginas]);
 
-  /* ─────────────────────────  HOOKS VARIOS  ───────────────────────── */
   const { token } = useAuth();
   // const navigate = useNavigate();
 
@@ -50,7 +46,6 @@ const ArticulosCRUD = () => {
     fetchArticulos();
   }, []);
 
-  /* ─────────────────────────  HANDLERS  ───────────────────────── */
   const handleInput = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setNuevoArticulo({ ...nuevoArticulo, [e.target.name]: e.target.value });
 
@@ -106,12 +101,11 @@ const ArticulosCRUD = () => {
     Swal.fire({ title: "¡Eliminado!", text: "Artículo eliminado.", icon: "success", confirmButtonColor: "#103778" });
   };
 
-  /* ─────────────────────────  RENDER  ───────────────────────── */
   return (
     <div className="p-6 max-w-5xl mx-auto bg-white rounded-lg shadow-md font-fam-ge">
       <h2 className="text-3xl font-bold mb-6 text-center">Gestión de Artículos</h2>
 
-      {/* ─────────────  FORMULARIO CREAR / EDITAR  ───────────── */}
+      {/* FORMULARIO CREAR / EDITAR  */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 items-start">
         <div className="space-y-4 font-semibold text-gray-700 hidden md:block">
           <p>Título:</p>
@@ -154,7 +148,7 @@ const ArticulosCRUD = () => {
         </button>
       )}
 
-      {/* ─────────────  TABLA  ───────────── */}
+      {/* TABLA */}
       <div className="overflow-x-auto">
         <table className="min-w-full text-sm text-left">
           <thead className="bg-gray-100 text-gray-700 uppercase">
@@ -199,7 +193,7 @@ const ArticulosCRUD = () => {
         </table>
       </div>
 
-      {/* ─────────────  PESTAÑAS DE PÁGINA  ───────────── */}
+      {/* PESTAÑAS DE PÁGINA */}
       {totalPaginas > 1 && (
         <nav className="flex flex-wrap justify-center gap-2 mt-6">
           {Array.from({ length: totalPaginas }, (_, i) => i + 1).map((num) => (

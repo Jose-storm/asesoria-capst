@@ -21,7 +21,7 @@ const CursoCard = ({ curso }: Props) => {
             to={`/cursos/${curso.id}`}
             className="inline-block mt-2 text-blue-600 hover:underline font-medium"
             >
-            Ver más →
+                Ver más →
             </Link>
         </div>
         </div>

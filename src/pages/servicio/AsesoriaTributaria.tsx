@@ -75,10 +75,8 @@ export default function AsesoriaTributaria(){
                     alt="Publicidad"
                     className="absolute inset-0 w-full h-full object-cover object-center"
                     />
-                    {/* Overlay oscuro para contraste */}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent z-10" />
 
-                    {/* Contenido centrado */}
                     <div className="relative z-10 flex items-center justify-center h-full">
                         <div className="text-center px-4 sm:px-8 max-w-3xl text-white">
                             {/* <p className="text-base">Cursos y talleres</p> */}
@@ -92,27 +90,25 @@ export default function AsesoriaTributaria(){
             {/* Posibilidad de segmentarlo por componentes */}
             <section className="bg-white py-16 px-6">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    
                     {/* Descripción */}
                     <div className="text-gray-800 font-fam-ge">
-                    <h2 className="text-4xl font-bold font-fam mb-4 leading-tight">
-                        Cumple <span className="text-[#103778]">con tus obligaciones fiscales</span> con nuestra Asesoría Tributaria
-                    </h2>
-                    <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                        En <strong>Asesoría Empresarial</strong>, brindamos un servicio especializado en <strong>asesoría tributaria</strong> para pequeñas y medianas empresas, ayudándolas a cumplir con el marco legal vigente y optimizar su carga fiscal de forma responsable.
-                    </p>
-                    <p className="text-lg text-gray-700 leading-relaxed">
-                        Te asesoramos en la correcta declaración de impuestos, gestión de tributos mensuales y anuales, fiscalizaciones y presentación de información ante SUNAT. Nuestro objetivo es reducir riesgos, evitar sanciones y mantener tu empresa en regla con total tranquilidad.
-                    </p>
+                        <h2 className="text-4xl font-bold font-fam mb-4 leading-tight">
+                            Cumple <span className="text-[#103778]">con tus obligaciones fiscales</span> con nuestra Asesoría Tributaria
+                        </h2>
+                        <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                            En <strong>Asesoría Empresarial</strong>, brindamos un servicio especializado en <strong>asesoría tributaria</strong> para pequeñas y medianas empresas, ayudándolas a cumplir con el marco legal vigente y optimizar su carga fiscal de forma responsable.
+                        </p>
+                        <p className="text-lg text-gray-700 leading-relaxed">
+                            Te asesoramos en la correcta declaración de impuestos, gestión de tributos mensuales y anuales, fiscalizaciones y presentación de información ante SUNAT. Nuestro objetivo es reducir riesgos, evitar sanciones y mantener tu empresa en regla con total tranquilidad.
+                        </p>
                     </div>
 
-                    {/* Imagen */}
                     <div className="w-full h-auto flex justify-center items-center">
-                    <img
-                        src={ImgCd}
-                        alt="Asesoría Tributaria"
-                        className="w-full h-auto"
-                    />
+                        <img
+                            src={ImgCd}
+                            alt="Asesoría Tributaria"
+                            className="w-full h-auto"
+                        />
                     </div>
                 </div>
             </section>
@@ -120,10 +116,10 @@ export default function AsesoriaTributaria(){
             <section className="bg-gray-50 py-20 px-6">
                 <div className="max-w-6xl mx-auto text-center mb-16">
                     <h2 className="text-4xl font-bold text-gray-800 mb-6 font-fam">
-                    ¿Cómo te ayudamos con nuestro <span className="text-[#103778]">Análisis Tributario?</span>
+                        ¿Cómo te ayudamos con nuestro <span className="text-[#103778]">Análisis Tributario?</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto font-fam">
-                    Acompañamos a tu empresa en la toma de decisiones estratégicas basadas en datos financieros sólidos, proyecciones realistas y control efectivo del rendimiento económico.
+                        Acompañamos a tu empresa en la toma de decisiones estratégicas basadas en datos financieros sólidos, proyecciones realistas y control efectivo del rendimiento económico.
                     </p>
                 </div>
 
@@ -143,10 +139,9 @@ export default function AsesoriaTributaria(){
             <section className="bg-white py-16 px-6">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-                    {/* Imagen */}
                     <div className="w-full h-auto flex justify-center items-center">
                     <img
-                        src={ImgTs} // Asegúrate que ImgCS esté importada correctamente
+                        src={ImgTs}
                         alt="Servicios de Asesoría Tributaria"
                         className="w-full h-auto shadow-lg"
                     />

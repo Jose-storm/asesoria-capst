@@ -11,8 +11,6 @@ const BlogGe = () => {
     useEffect(() => {
         const fetchArticulos = async () => {
         try {
-            // Simula delay de red (opcional para probar)
-            // await new Promise((res) => setTimeout(res, 1000));
             const res = await axios.get("/articulos");
             setArticulos(res.data);
         } catch (err) {
@@ -24,7 +22,6 @@ const BlogGe = () => {
         fetchArticulos();
     }, []);
 
-    // Estado de cargando
     if (loading) {
         return (
         <div className="flex items-center justify-center min-h-[50vh]">
@@ -38,7 +35,6 @@ const BlogGe = () => {
 
     return (
         <>
-        {/* Portada superior */}
         <section className="w-full bg-gradient-to-r from-white to-gray-50 shadow-md">
             <div className="relative w-full h-80 sm:h-96 lg:h-[21rem] overflow-hidden">
             <img
@@ -58,7 +54,7 @@ const BlogGe = () => {
             </div>
         </section>
 
-        {/* Sección de artículos en formato grid */}
+        {/* Sección de artículos grid */}
         <section className="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
             {articulos.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -46,7 +46,7 @@ export default function FormularioNuevoUsuario({ onSuccess }: { onSuccess: () =>
 
       Swal.fire("¡Registrado!", "El usuario fue creado correctamente", "success");
       setForm({ nombre: "", email: "", password: "", rol_id: "" });
-      onSuccess(); // recargar lista
+      onSuccess();
     } catch (err: any) {
       console.error(err);
       Swal.fire("Error", err?.response?.data?.message || "No se pudo registrar", "error");

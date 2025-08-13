@@ -9,7 +9,6 @@ interface Props {
 const ContactoVer = ({ mensaje, onClose }: Props) => {
     const backdropRef = useRef<HTMLDivElement>(null);
 
-    /* ─── Cerrar con tecla Esc ─── */
     useEffect(() => {
         const escListener = (e: KeyboardEvent) => {
         if (e.key === "Escape") onClose();
@@ -18,7 +17,6 @@ const ContactoVer = ({ mensaje, onClose }: Props) => {
         return () => window.removeEventListener("keydown", escListener);
     }, [onClose]);
 
-    /* ─── Cerrar haciendo clic fuera ─── */
     const handleBackdropClick = (e: React.MouseEvent) => {
         if (e.target === backdropRef.current) onClose();
     };
@@ -34,7 +32,6 @@ const ContactoVer = ({ mensaje, onClose }: Props) => {
                     p-6 transition-all duration-300 ease-out
                     animate-scaleIn"
         >
-            {/* Botón cerrar */}
             <button
             onClick={onClose}
             className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl leading-none"
@@ -48,28 +45,28 @@ const ContactoVer = ({ mensaje, onClose }: Props) => {
             <div className="max-h-[60vh] overflow-y-auto pr-2">
             <dl className="space-y-3 text-sm">
                 <div>
-                <dt className="font-semibold text-gray-700">Nombre:</dt>
-                <dd className="text-gray-800">{mensaje.nombre}</dd>
+                    <dt className="font-semibold text-gray-700">Nombre:</dt>
+                    <dd className="text-gray-800">{mensaje.nombre}</dd>
                 </div>
                 <div>
-                <dt className="font-semibold text-gray-700">Email:</dt>
-                <dd className="text-gray-800 break-all">{mensaje.email}</dd>
+                    <dt className="font-semibold text-gray-700">Email:</dt>
+                    <dd className="text-gray-800 break-all">{mensaje.email}</dd>
                 </div>
                 <div>
-                <dt className="font-semibold text-gray-700">Teléfono:</dt>
-                <dd className="text-gray-800">
+                    <dt className="font-semibold text-gray-700">Teléfono:</dt>
+                    <dd className="text-gray-800">
                     {mensaje.telefono || "No proporcionado"}
                 </dd>
                 </div>
                 <div>
-                <dt className="font-semibold text-gray-700">Mensaje:</dt>
-                <dd className="text-gray-800 whitespace-pre-line">
+                    <dt className="font-semibold text-gray-700">Mensaje:</dt>
+                    <dd className="text-gray-800 whitespace-pre-line">
                     {mensaje.mensaje}
                 </dd>
                 </div>
                 <div>
-                <dt className="font-semibold text-gray-700">Fecha enviado:</dt>
-                <dd className="text-gray-800">{mensaje.enviado_en}</dd>
+                    <dt className="font-semibold text-gray-700">Fecha enviado:</dt>
+                    <dd className="text-gray-800">{mensaje.enviado_en}</dd>
                 </div>
             </dl>
             </div>

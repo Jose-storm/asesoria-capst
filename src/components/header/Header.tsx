@@ -17,7 +17,6 @@ const closeMenu = () => {
   return (
     <header className="shadow-md sticky w-full z-20 left-0 top-0 bg-[#103778]">
       <div className="flex justify-between items-center max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-5 h-16 bg-[#103778]">
-        {/* Logo */}
         <Link to="/">
           <img
             src={Imgll}
@@ -31,7 +30,6 @@ const closeMenu = () => {
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
 
-        {/* Navegación principal */}
         <nav
           className={`md:flex md:items-center md:space-x-6 ${
             isOpen ? 'block' : 'hidden'

@@ -54,17 +54,16 @@ const ServiciosGrid: React.FC = () => (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {servicios.map(({ id, titulo, descripcion, icono }) => (
             <div key={id} className={twMerge(cardBase, cardHover)}>
-            {/* icono */}
-            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#103778] to-blue-500 text-3xl text-white">
-                {icono}
-            </div>
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#103778] to-blue-500 text-3xl text-white">
+                    {icono}
+                </div>
 
-            <h3 className="text-lg font-semibold mb-2 font-fam-ge text-gray-900 group-hover:text-blue-700">
-                {titulo}
-            </h3>
-            <p className="text-gray-600 group-hover:text-gray-200 group-hover:transition-colors">
-                {descripcion}
-            </p>
+                <h3 className="text-lg font-semibold mb-2 font-fam-ge text-gray-900 group-hover:text-blue-700">
+                    {titulo}
+                </h3>
+                <p className="text-gray-600 group-hover:text-gray-200 group-hover:transition-colors">
+                    {descripcion}
+                </p>
             </div>
         ))}
         </div>

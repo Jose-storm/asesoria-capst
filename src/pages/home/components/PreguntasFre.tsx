@@ -34,11 +34,6 @@ const faqs: Pregunta[] = [
         "Nuestros clientes obtienen soluciones personalizadas, cumplimiento normativo, optimización fiscal y mejoras estratégicas que impulsan el crecimiento sostenible.",
     },
 ];
-// const contactoInfo = {
-//     telefono: '+51 987 654 321',
-//     correo: 'contacto@tudominio.com',
-//     mensaje: '¿Tienes dudas? Estamos aquí para ayudarte en todo momento.',
-// };
 
 const PreguntasFre: React.FC = () => {
     const [openId, setOpenId] = useState<string | null>(null);
@@ -62,40 +57,40 @@ const PreguntasFre: React.FC = () => {
 
                 {/* Acordeón */}
                 <div className="w-full lg:w-1/2 text-white">
-                <h2 className="text-4xl font-bold text-center lg:text-left mb-5 font-fam">
-                    ¿Preguntas Frecuentes?
-                </h2>
-                <p className="text-gray-200 text-lg mb-8 font-fam-ge">
-                    Conoce más sobre cómo podemos ayudarte a fortalecer y optimizar tu empresa.
-                </p>
+                    <h2 className="text-4xl font-bold text-center lg:text-left mb-5 font-fam">
+                        ¿Preguntas Frecuentes?
+                    </h2>
+                    <p className="text-gray-200 text-lg mb-8 font-fam-ge">
+                        Conoce más sobre cómo podemos ayudarte a fortalecer y optimizar tu empresa.
+                    </p>
 
-                <div className="space-y-4 font-fam-ge">
-                    {faqs.map(({ id, pregunta, respuesta }) => (
-                    <div
-                        key={id}
-                        className="rounded-md shadow-md overflow-hidden transition-all"
-                    >
-                        <button
-                        onClick={() => toggleAccordion(id)}
-                        className="w-full flex justify-between items-center px-6 py-4 font-semibold text-white bg-[#791137] hover:bg-[#5d0e2c] transition"
-                        >
-                        <span className="text-left">{pregunta}</span>
-                        <ChevronDown
-                            className={`w-5 h-5 transition-transform duration-300 ${
-                            openId === id ? "rotate-180" : ""
-                            }`}
-                        />
-                        </button>
+                    <div className="space-y-4 font-fam-ge">
+                        {faqs.map(({ id, pregunta, respuesta }) => (
                         <div
-                        className={`px-6 text-gray-800 bg-white transition-all duration-300 overflow-hidden ${
-                            openId === id ? "max-h-48 py-4" : "max-h-0"
-                        }`}
+                            key={id}
+                            className="rounded-md shadow-md overflow-hidden transition-all"
                         >
-                        {respuesta}
+                            <button
+                            onClick={() => toggleAccordion(id)}
+                            className="w-full flex justify-between items-center px-6 py-4 font-semibold text-white bg-[#791137] hover:bg-[#5d0e2c] transition"
+                            >
+                            <span className="text-left">{pregunta}</span>
+                            <ChevronDown
+                                className={`w-5 h-5 transition-transform duration-300 ${
+                                openId === id ? "rotate-180" : ""
+                                }`}
+                            />
+                            </button>
+                            <div
+                            className={`px-6 text-gray-800 bg-white transition-all duration-300 overflow-hidden ${
+                                openId === id ? "max-h-48 py-4" : "max-h-0"
+                            }`}
+                            >
+                            {respuesta}
+                            </div>
                         </div>
+                        ))}
                     </div>
-                    ))}
-                </div>
                 </div>
             </div>
             </section>
@@ -110,16 +105,16 @@ const PreguntasFre: React.FC = () => {
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
                     {/* Teléfono */}
                     <div className="flex flex-col items-center space-y-2">
-                    <div className="text-3xl"><i className="fa-solid fa-phone mr-2"></i></div>
-                    <span className="text-sm text-gray-500 uppercase tracking-wide">Teléfono</span>
-                    <p className="text-base font-medium select-all">+51 993 568 867</p>
+                        <div className="text-3xl"><i className="fa-solid fa-phone mr-2"></i></div>
+                        <span className="text-sm text-gray-500 uppercase tracking-wide">Teléfono</span>
+                        <p className="text-base font-medium select-all">+51 993 568 867</p>
                     </div>
 
                     {/* Correo */}
                     <div className="flex flex-col items-center space-y-2">
-                    <div className="text-3xl"><i className="fa-solid fa-envelope"></i></div>
-                    <span className="text-sm text-gray-500 uppercase tracking-wide">Correo</span>
-                    <p className="text-base font-medium select-all">asesoriaempresarial.info@gmail.com</p>
+                        <div className="text-3xl"><i className="fa-solid fa-envelope"></i></div>
+                        <span className="text-sm text-gray-500 uppercase tracking-wide">Correo</span>
+                        <p className="text-base font-medium select-all">asesoriaempresarial.info@gmail.com</p>
                     </div>
                 </div>
             </section>

@@ -15,10 +15,8 @@ return (
                     alt="Publicidad"
                     className="absolute inset-0 w-full h-full object-cover object-center"
                     />
-                    {/* Overlay oscuro para contraste */}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent z-10" />
 
-                    {/* Contenido centrado */}
                     <div className="relative z-10 flex items-center justify-center h-full">
                     <div className="text-center px-4 sm:px-8 max-w-3xl text-white">
                         <p>Empresa</p>

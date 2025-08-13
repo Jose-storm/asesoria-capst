@@ -13,7 +13,6 @@ const ContactForm = () => {
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
-        // Solo permitir números en teléfono
         if (e.target.name === "telefono" && !/^\d*$/.test(e.target.value)) return;
 
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -22,7 +21,6 @@ const ContactForm = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Validación final: si hay teléfono, debe tener 8 dígitos
         if (form.telefono && form.telefono.length !== 9) {
         alert("El teléfono debe tener exactamente 8 dígitos.");
         return;
@@ -128,7 +126,6 @@ const ContactForm = () => {
             />
         </div>
 
-        {/* Botón */}
         <div className="text-center">
             <button
             type="submit"

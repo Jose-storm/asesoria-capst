@@ -38,7 +38,6 @@ return (
             <i className="fa-brands fa-whatsapp"></i>
         </a>
 
-        {/* Botón Volver Arriba */}
         {showScrollTop && (
             <button
             onClick={scrollToTop}

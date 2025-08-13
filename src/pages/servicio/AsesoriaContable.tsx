@@ -1,10 +1,8 @@
 //Asesoria Contable page
-//Importación de imágenes por variables
 import ImgC from "@/assets/img/I_contable.jpg"
 import ImgCd from "@/assets/img/acont_one.png"
 import ImgCS from "@/assets/img/AC_servicio.jpg"
 // data/serviciosContables.ts
-// types.ts o dentro del componente
 type Servicio = {
     id: number;
     titulo: string;
@@ -78,10 +76,8 @@ export default function AsesoriaContable(){
                     alt="Publicidad"
                     className="absolute inset-0 w-full h-full object-cover object-center"
                     />
-                    {/* Overlay oscuro para contraste */}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent z-10" />
 
-                    {/* Contenido centrado */}
                     <div className="relative z-10 flex items-center justify-center h-full">
                         <div className="text-center px-4 sm:px-8 max-w-3xl text-white">
                             {/* <p className="text-base">Cursos y talleres</p> */}
@@ -98,18 +94,17 @@ export default function AsesoriaContable(){
                     
                     {/* Descripción */}
                     <div className="text-gray-800 font-fam-ge">
-                    <h2 className="text-4xl font-bold font-fam mb-4 leading-tight">
-                        Fortalece <span className="text-[#103778]">la salud financiera</span> de tu negocio con nuestra Asesoría Contable
-                    </h2>
-                    <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                        En <strong>Asesoría Empresarial</strong>, brindamos servicios especializados en <strong>asesoría contable</strong> para pequeñas y medianas empresas, ayudándolas a mantener sus finanzas ordenadas, cumplir con sus obligaciones fiscales y tomar decisiones estratégicas con información precisa.
-                    </p>
-                    <p className="text-lg text-gray-700 leading-relaxed">
-                        Nos encargamos de la organización contable, elaboración de estados financieros, declaraciones tributarias, y más. Nuestro acompañamiento personalizado te permite enfocarte en hacer crecer tu negocio, mientras nosotros cuidamos de tu contabilidad con responsabilidad y profesionalismo.
-                    </p>
+                        <h2 className="text-4xl font-bold font-fam mb-4 leading-tight">
+                            Fortalece <span className="text-[#103778]">la salud financiera</span> de tu negocio con nuestra Asesoría Contable
+                        </h2>
+                        <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                            En <strong>Asesoría Empresarial</strong>, brindamos servicios especializados en <strong>asesoría contable</strong> para pequeñas y medianas empresas, ayudándolas a mantener sus finanzas ordenadas, cumplir con sus obligaciones fiscales y tomar decisiones estratégicas con información precisa.
+                        </p>
+                        <p className="text-lg text-gray-700 leading-relaxed">
+                            Nos encargamos de la organización contable, elaboración de estados financieros, declaraciones tributarias, y más. Nuestro acompañamiento personalizado te permite enfocarte en hacer crecer tu negocio, mientras nosotros cuidamos de tu contabilidad con responsabilidad y profesionalismo.
+                        </p>
                     </div>
 
-                    {/* Imagen */}
                     <div className="w-full h-auto flex justify-center items-center">
                     <img
                         src={ImgCd}
@@ -120,14 +115,13 @@ export default function AsesoriaContable(){
                 </div>
             </section>
 
-            {/* Seccion de información Ayuda recibidad en la asesoría */}
             <section className="bg-gray-50 py-20 px-6">
                 <div className="max-w-6xl mx-auto text-center mb-16">
                     <h2 className="text-4xl font-bold text-gray-800 mb-6 font-fam">
-                    ¿Cómo te ayudamos con nuestra <span className="text-[#103778]">Asesoría Contable?</span>
+                        ¿Cómo te ayudamos con nuestra <span className="text-[#103778]">Asesoría Contable?</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto font-fam">
-                    Acompañamos a tu empresa en la toma de decisiones estratégicas basadas en datos financieros sólidos, proyecciones realistas y control efectivo del rendimiento económico.
+                        Acompañamos a tu empresa en la toma de decisiones estratégicas basadas en datos financieros sólidos, proyecciones realistas y control efectivo del rendimiento económico.
                     </p>
                 </div>
 
@@ -151,7 +145,7 @@ export default function AsesoriaContable(){
                     {/* Imagen */}
                     <div className="w-full h-auto flex justify-center items-center">
                     <img
-                        src={ImgCS} // Asegúrate que ImgCd esté importada
+                        src={ImgCS}
                         alt="Servicios de Asesoría Contable"
                         className="w-full h-auto shadow-lg"
                     />
@@ -159,18 +153,18 @@ export default function AsesoriaContable(){
 
                     {/* Lista de servicios */}
                     <div className="text-gray-800 font-fam-ge">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6 font-fam">
-                        Servicios incluidos en nuestra <span className="text-[#103778]">Asesoría Contable</span>
-                    </h2>
-                    <p className="text-base text-gray-700 font-fam mb-6">En su disposición se encuentra los siguientes servicios en Asesoría Contable:</p>
-                    <ul className="space-y-3">
-                        {features.map((item, index) => (
-                        <li key={index} className="flex items-start gap-2 font-fam-ge">
-                            <span className="text-[#103778] text-lg"><i className="fa-solid fa-circle-check"></i></span>
-                            <span className="text-gray-800 text-lg">{item}</span>
-                        </li>
-                        ))}
-                    </ul>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6 font-fam">
+                            Servicios incluidos en nuestra <span className="text-[#103778]">Asesoría Contable</span>
+                        </h2>
+                        <p className="text-base text-gray-700 font-fam mb-6">En su disposición se encuentra los siguientes servicios en Asesoría Contable:</p>
+                        <ul className="space-y-3">
+                            {features.map((item, index) => (
+                            <li key={index} className="flex items-start gap-2 font-fam-ge">
+                                <span className="text-[#103778] text-lg"><i className="fa-solid fa-circle-check"></i></span>
+                                <span className="text-gray-800 text-lg">{item}</span>
+                            </li>
+                            ))}
+                        </ul>
                     </div>
 
                 </div>

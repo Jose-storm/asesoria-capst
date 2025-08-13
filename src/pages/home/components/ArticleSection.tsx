@@ -63,7 +63,6 @@ const ArticleSection = () => {
             <div className="text-center text-gray-500 py-10 font-fam-ge">No hay artículos disponibles.</div>
         ) : (
             <div className="relative overflow-hidden">
-            {/* Botón izquierdo */}
             <button
                 aria-label="Artículo anterior"
                 onClick={prev}
@@ -85,7 +84,6 @@ const ArticleSection = () => {
                 ))}
             </div>
 
-            {/* Botón derecho */}
             <button
                 aria-label="Artículo siguiente"
                 onClick={next}
@@ -98,7 +96,6 @@ const ArticleSection = () => {
             </div>
         )}
 
-        {/* CTA “Ver más artículos” */}
         <div className="text-center mt-10">
             <Link
             to="/blog"
